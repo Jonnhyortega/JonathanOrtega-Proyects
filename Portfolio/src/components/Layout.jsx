@@ -2,7 +2,11 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faEnvelope, faFolder } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faEnvelope,
+  faFolder,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = styled.nav`
   padding: 10px;

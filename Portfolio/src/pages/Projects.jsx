@@ -54,11 +54,11 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 60px auto auto auto;
   color: #ffffff;
   animation: ${fadeIn} 1s ease-in-out;
   width: 100%;
@@ -80,7 +80,14 @@ const CardGrid = styled.div`
   margin-top: 30px;
   display: flex;
   gap: 20px;
+
+  @media (max-width: 1070px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media (max-width: 700px) {
+    display: flex;
     flex-direction: column;
   }
 `;
@@ -131,6 +138,7 @@ const CardContent = styled.div`
 const CardTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #f39c12;
 `;
 
 const CardLink = styled.a`

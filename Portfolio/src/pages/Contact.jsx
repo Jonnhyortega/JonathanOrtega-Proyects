@@ -10,12 +10,13 @@ import {
 import profilePhoto from "../imgs/img-perfil.jpg";
 
 const ContactContainer = styled.div`
-  margin-top: 22px;
+  margin: 20px auto auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  width: 90%;
 `;
 
 const Title = styled.h2`
@@ -58,11 +59,11 @@ const ProfileImg = styled.img`
   }
 `;
 
-
 const Subtitle = styled.p`
   font-size: 1.5em;
   font-weight: 200;
   margin-top: 25px;
+  padding: 1em;
   animation: fadeInUp 1s ease-in-out;
   text-align: justify;
   @keyframes fadeInUp {
@@ -94,17 +95,17 @@ const ContactMethods = styled.div`
 `;
 
 const ContactLink = styled.a`
-  font-size: 1.2rem;
-  color: #f39c12;
+  font-size: 1.3em;
+  color: white;
   text-decoration: none;
-  border: 2px solid #f39c12;
+  border: 2px solid white;
   padding: 10px 20px;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: #f39c12;
-    color: #ffffff;
+    background-color: white;
+    color: #f39c12;
     box-shadow: 1px 1px 5px black;
   }
 `;
@@ -120,22 +121,22 @@ const EmailContainer = styled.div`
 
 const EmailText = styled.p`
   font-size: 1.2rem;
-  color: #f39c12;
+  color: white;
 `;
 
 const CopyButton = styled.button`
   font-size: 1.2rem;
-  color: #f39c12;
+  color: white;
   background-color: transparent;
-  border: 2px solid #f39c12;
+  border: 2px solid white;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.1s ease, color 0.3s ease;
 
   &:hover {
-    background-color: #f39c12;
-    color: #ffffff;
+    background-color: white;
+    color: #f39c12;
     box-shadow: 1px 1px 5px black;
   }
 `;
@@ -196,9 +197,8 @@ export const Contact = () => {
       <Title>Contacto</Title>
       <ProfileImg src={profilePhoto}></ProfileImg>
 
-
       <Subtitle>
-        Puedes contactarme a través de los siguientes métodos:
+        Puedes contactarme a través de las siguientes plataformas:
       </Subtitle>
 
       <ContactMethods>

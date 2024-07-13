@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const HomeContainer = styled.div`
- margin-top: 100px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,12 @@ const HomeContainer = styled.div`
 `;
 
 const Title = styled.h1`
+  border-bottom: 2px solid;
+  font-size: 2.5em;
   font-size: 3.5rem;
   margin-bottom: 20px;
   color: #f39c12;
   animation: fadeInDown 1s ease-in-out;
-
   @keyframes fadeInDown {
     0% {
       opacity: 0;
@@ -27,10 +28,20 @@ const Title = styled.h1`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 900px) {
+    width: 50%;
+    border: 0;
+  }
+  @media (max-width: 450px) {
+    font-size: 2em;
+  }
 `;
 
 const Subtitle = styled.p`
+  padding: 1em;
   font-size: 1.5rem;
+  font-weight: 200;
   margin-bottom: 40px;
   animation: fadeInUp 1s ease-in-out;
 
@@ -67,7 +78,7 @@ export const Home = () => {
     <HomeContainer>
       <Title>Bienvenido a mi portafolio</Title>
       <Subtitle>¡Descubre mis proyectos y ponte en contacto conmigo!</Subtitle>
-      <StyledLink to='/projects'>Ver  proyectos</StyledLink>
+      <StyledLink to="/projects">Ver proyectos</StyledLink>
     </HomeContainer>
   );
 };
