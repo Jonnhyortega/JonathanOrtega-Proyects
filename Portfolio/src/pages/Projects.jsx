@@ -104,7 +104,7 @@ const Card = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 1px 1px 10px 5px #f39c12;
+    box-shadow: 1px 1px 5px 1px black;
   }
 `;
 
@@ -149,8 +149,8 @@ const CardLink = styled.a`
   transition: color 1s ease, text-decoration 0.3s ease;
 
   &:hover {
-    color: red;
-    filter: drop-shadow(1px 2px 5px red);
+    color: #f39c12;
+    filter: drop-shadow(1px 2px 5px #f39c12);
     text-decoration: underline;
   }
 `;
