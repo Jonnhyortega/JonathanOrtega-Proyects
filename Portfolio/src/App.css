@@ -26,7 +26,6 @@
 #root {
   width: 100%;
   height: 100vh;
-  text-align: justify;
   background: linear-gradient(
     to bottom,
     var(--color1) 40%,
