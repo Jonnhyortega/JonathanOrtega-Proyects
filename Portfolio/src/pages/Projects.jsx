@@ -31,7 +31,7 @@ const projects = [
   {
     name: "Store",
     img: STORE_2,
-    link: "https://store-psi-sable.vercel.app/",
+    link: "https://grant-movies.vercel.app/",
     language: ["html5", "css3-alt", "js", "bootstrap"],
   },
   {

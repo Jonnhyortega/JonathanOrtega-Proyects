@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import profilePhoto from "../imgs/img-perfil.jpg";
 
-const ContactContainer = styled.div`
+export const ContactContainer = styled.div`
   margin: 20px auto auto auto;
   display: flex;
   flex-direction: column;
