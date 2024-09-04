@@ -4,11 +4,9 @@
   font-family: "Kanit", sans-serif;
   font-weight: 700;
   font-style: normal;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(9, 0, 9);
-
+  background-color: transparent;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,10 +33,16 @@ a {
 a:hover {
   color: pink;
 }
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color1) 40%,
+    var(--color3) 70%  );
+    align-items: center;
 }
 
 h1 {

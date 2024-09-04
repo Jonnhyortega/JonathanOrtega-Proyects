@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import STORE_1 from "../imgs/chulos-terrazos.png";
+import STORE_1 from "../imgs/astrofy.jpeg";
 import STORE_2 from "../imgs/grantMovies.png";
 import WORK_LIST from "../imgs/to-do-list.jpg";
 import LANDING from "../imgs/logo-goa-mma.png";
@@ -17,10 +17,10 @@ export const iconMap = {
 
 const projects = [
   {
-    name: "Store",
+    name: "Astrofy",
     img: STORE_1,
-    link: "https://decoracion-chulo.vercel.app/",
-    language: ["html5", "css3-alt", "js"],
+    link: "https://astrofycl.vercel.app/",
+    language: ["html5", "css3-alt", "js", "react"],
   },
   {
     name: "Lista de tareas",
@@ -31,7 +31,7 @@ const projects = [
   {
     name: "Store",
     img: STORE_2,
-    link: "https://grant-movies.vercel.app/",
+    link: "https://grant-movies.vercel.app/ ",
     language: ["html5", "css3-alt", "js", "bootstrap"],
   },
   {
@@ -58,10 +58,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 60px auto auto auto;
   color: #ffffff;
   animation: ${fadeIn} 1s ease-in-out;
   width: 100%;
+  background: transparent;
+  padding: 100px 0;
 `;
 
 const Title = styled.h2`
@@ -69,7 +70,6 @@ const Title = styled.h2`
   color: #f39c12;
   border-bottom: 2px solid;
   font-size: 2.5em;
-  margin: 0;
   color: #f39c12;
   text-align: justify;
 
@@ -77,26 +77,28 @@ const Title = styled.h2`
 `;
 
 const CardGrid = styled.div`
-  margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 
-  @media (max-width: 1070px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  // @media (max-width: 1070px) {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  // }
 
-  @media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-  }
+  // @media (max-width: 700px) {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 `;
 
 const Card = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  max-width: 220px;
+  width: 220px;
   max-height: 170px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2}});
   transition: transform 0.3s ease, box-shadow 0.3s ease;

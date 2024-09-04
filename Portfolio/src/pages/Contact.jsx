@@ -10,13 +10,12 @@ import {
 import profilePhoto from "../imgs/img-perfil.jpg";
 
 export const ContactContainer = styled.div`
-  margin: 20px auto auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  width: 90%;
+  padding: 100px 0;
 `;
 
 const Title = styled.h2`

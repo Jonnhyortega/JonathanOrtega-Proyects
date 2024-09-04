@@ -10,6 +10,7 @@ const HomeContainer = styled.div`
   justify-content: center;
   text-alig: center;
   color: #ffffff;
+  padding: 100px 0;
 `;
 
 const Title = styled.h1`
