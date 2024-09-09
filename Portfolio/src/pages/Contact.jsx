@@ -42,7 +42,6 @@ const ContactContainer = styled.div`
   background: transparent;
   text-align: center;
   width: 100%;
-  padding: 0 30px;
 `;
 
 const Title = styled.h2`
