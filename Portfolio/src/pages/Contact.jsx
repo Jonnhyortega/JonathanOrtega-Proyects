@@ -8,135 +8,135 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import profilePhoto from "../imgs/img-perfil.jpg";
+import certifDW from "../imgs/diseñoWeb.jpg";
+import certifJs from "../imgs/javascript.jpg";
 
-export const ContactContainer = styled.div`
+const ContactContainer = styled.div`
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: #ffffff;
-  padding: 100px 0;
+  background: transparent;
+  text-align: center;
+  width: 100%;
 `;
 
 const Title = styled.h2`
-  border-bottom: 2px solid;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #f39c12;
-  text-align: justify;
-  animation: fadeInDown 1s ease-in-out;
-
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  width: 100%;
+  max-width: 800px;
 `;
 
 const ProfileImg = styled.img`
-  width: 150px;
-  border: 1px solid #f39c12;
+  width: 180px;
+  border: 3px solid #f39c12;
   border-radius: 50%;
-  animation: animationProfile 1s ease-in-out;
-  transform-origin: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
 
-  @keyframes animationProfile {
-    0% {
-      opacity: 0;
-      width: 10px;
-      transform: scale(0.1) translateY(25px);
-    }
-    100% {
-      opacity: 1;
-      width: 150px;
-      transform: scale(1) translateY(0);
-    }
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.5em;
+  font-size: 1.8em;
+  margin: 20px 0;
   font-weight: 200;
-  margin-top: 25px;
-  padding: 1em;
-  animation: fadeInUp 1s ease-in-out;
-  text-align: justify;
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 `;
 
 const ContactMethods = styled.div`
   display: flex;
-  align-items: center;
-  gap: 20px;
-  animation: fadeIn 1.5s ease-in-out;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 `;
 
 const ContactLink = styled.a`
-  font-size: 1.3em;
+  font-size: 1.8em;
   color: white;
-  text-decoration: none;
-  border: 2px solid white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f39c12;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: white;
-    color: #f39c12;
-    box-shadow: 1px 1px 5px black;
+    background-color: #e67e22;
   }
 `;
 
 const EmailContainer = styled.div`
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  animation: fadeIn 1.5s ease-in-out;
+  margin-bottom: 40px;
 `;
 
 const EmailText = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
+  margin-bottom: 10px;
 `;
 
 const CopyButton = styled.button`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
   background-color: transparent;
   border: 2px solid white;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.1s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: white;
     color: #f39c12;
-    box-shadow: 1px 1px 5px black;
+  }
+`;
+
+const ContainerCertificados = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 0 20px 0;
+`;
+
+const Certificado = styled.div`
+  background: transparent;
+  padding: 0 20px;
+  border-radius: 12px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+`;
+
+const TitleFirst = styled.h2`
+  font-size: 2em;
+  color: #f39c12;
+`;
+
+const TitleCertif = styled.h3`
+  font-size: 1.2em;
+  color: #f39c12;
+`;
+
+const CertifButton = styled.a`
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #f39c12;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f39c12;
+    color: white;
   }
 `;
 
@@ -160,17 +160,15 @@ const fadeInOut = keyframes`
 `;
 
 const Notification = styled.div`
-  letter-spacing: 1px;
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-50%);
   background-color: #f39c12;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 1.2rem;
-  font-weight: 300;
   animation: ${fadeInOut} 3s ease-in-out;
 `;
 
@@ -194,11 +192,8 @@ export const Contact = () => {
   return (
     <ContactContainer>
       <Title>Contacto</Title>
-      <ProfileImg src={profilePhoto}></ProfileImg>
-
-      <Subtitle>
-        Puedes contactarme a través de las siguientes plataformas:
-      </Subtitle>
+      <ProfileImg src={profilePhoto} alt="Foto de perfil" />
+      <Subtitle>Contactame a través de las siguientes plataformas</Subtitle>
 
       <ContactMethods>
         <ContactLink href="mailto:jonnhyortega@gmail.com">
@@ -213,7 +208,7 @@ export const Contact = () => {
         <ContactLink href="https://github.com/Jonnhyortega" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
         </ContactLink>
-        <ContactLink href="https://twitter.com/your-profile" target="_blank">
+        <ContactLink href="https://wa.link/esj2m3" target="_blank">
           <FontAwesomeIcon icon={faWhatsapp} />
         </ContactLink>
       </ContactMethods>
@@ -221,17 +216,48 @@ export const Contact = () => {
       <EmailContainer>
         <EmailText>jonnhyortega@gmail.com</EmailText>
         <CopyButton onClick={() => copyToClipboard("jonnhyortega@gmail.com")}>
-          <FontAwesomeIcon icon={faCopy} />
+          <FontAwesomeIcon icon={faCopy} /> Copiar correo
         </CopyButton>
       </EmailContainer>
 
       {showNotification && (
         <Notification>
-          Copiado en portapapeles, espero tu mensaje 👌😎
+          Correo copiado al portapapeles, espero tu mensaje 👌😎
         </Notification>
       )}
+
+      <ContainerCertificados>
+        <TitleFirst>Certificaciones</TitleFirst>
+
+        <Certificado>
+          <TitleCertif>Alura Latam - Oracle</TitleCertif>
+          <p>Programa educativo de Oracle y Alura Latam</p>
+          <CertifButton
+            href="https://app.aluracursos.com/user/jonnhyortega/fullCertificate/3195a1e9faf52cddc7ec10489f7f6b37"
+            target="_blank"
+          >
+            Ver Certificado
+          </CertifButton>
+        </Certificado>
+
+        <Certificado>
+          <TitleCertif>Nucba - Full Stack</TitleCertif>
+          <p>
+            Carrera Full Stack con especialización en Diseño Web responsivo,
+            JavaScript, React y Back end (Stack MERN)
+          </p>
+          <div>
+            <CertifButton href={certifDW} download="diseñoWeb.jpg">
+              Ver Certificado Diseño Web
+            </CertifButton>
+            <CertifButton href={certifJs} download="javascript.jpg">
+              Ver certificado JS
+            </CertifButton>
+            <CertifButton>React, upcoming next...</CertifButton>
+            <CertifButton>Backend, upcoming next...</CertifButton>
+          </div>
+        </Certificado>
+      </ContainerCertificados>
     </ContactContainer>
   );
 };
-
-export default Contact;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,10 +10,15 @@ const HomeContainer = styled.div`
   text-alig: center;
   color: #ffffff;
   padding: 100px 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const Title = styled.h1`
-  border-bottom: 2px solid;
   font-size: 2.5em;
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -60,7 +64,7 @@ const Subtitle = styled.p`
 `;
 
 const StyledLink = styled(Link)`
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-size: 1.2rem;
   color: #fff;
   background-color: #f39c12;
@@ -69,7 +73,7 @@ const StyledLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-
+  text-align: center;
   &:hover {
     background-color: #d17c07;
   }
@@ -80,7 +84,10 @@ export const Home = () => {
     <HomeContainer>
       <Title>Bienvenido a mi portafolio</Title>
       <Subtitle>¡Descubre mis proyectos y ponte en contacto conmigo!</Subtitle>
-      <StyledLink to="/projects">Ver proyectos</StyledLink>
+      <div>
+        <StyledLink to="/projects">Ver proyectos</StyledLink>
+        <StyledLink to="/contact">Contacto</StyledLink>
+      </div>
     </HomeContainer>
   );
 };

@@ -62,7 +62,7 @@ const Container = styled.div`
   animation: ${fadeIn} 1s ease-in-out;
   width: 100%;
   background: transparent;
-  padding: 100px 0;
+  padding: 20px 0;
 `;
 
 const Title = styled.h2`
