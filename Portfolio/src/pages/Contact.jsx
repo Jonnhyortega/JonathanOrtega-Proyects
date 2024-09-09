@@ -11,6 +11,28 @@ import profilePhoto from "../imgs/img-perfil.jpg";
 import certifDW from "../imgs/diseñoWeb.jpg";
 import certifJs from "../imgs/javascript.jpg";
 
+const fadeInDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const ContactContainer = styled.div`
   margin-top: 30px;
   display: flex;
@@ -20,6 +42,7 @@ const ContactContainer = styled.div`
   background: transparent;
   text-align: center;
   width: 100%;
+  padding: 0 30px;
 `;
 
 const Title = styled.h2`
@@ -27,6 +50,7 @@ const Title = styled.h2`
   color: #f39c12;
   width: 100%;
   max-width: 800px;
+  animation: ${fadeInDown} 1s ease-in-out;
 `;
 
 const ProfileImg = styled.img`
@@ -35,6 +59,7 @@ const ProfileImg = styled.img`
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease;
+  animation: ${fadeInUp} 1s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
@@ -45,6 +70,7 @@ const Subtitle = styled.p`
   font-size: 1.8em;
   margin: 20px 0;
   font-weight: 200;
+  animation: ${fadeInUp} 1s ease-in-out;
 `;
 
 const ContactMethods = styled.div`
@@ -53,6 +79,7 @@ const ContactMethods = styled.div`
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  animation: ${fadeInUp} 1s ease-in-out;
 `;
 
 const ContactLink = styled.a`
@@ -69,13 +96,12 @@ const ContactLink = styled.a`
 `;
 
 const EmailContainer = styled.div`
-  margin-bottom: 40px;
+  animation: ${fadeInUp} 1s ease-in-out;
 `;
 
 const EmailText = styled.p`
   font-size: 1.4rem;
   color: white;
-  margin-bottom: 10px;
 `;
 
 const CopyButton = styled.button`
@@ -100,6 +126,7 @@ const ContainerCertificados = styled.div`
   align-items: center;
   gap: 20px;
   padding: 0 0 20px 0;
+  animation: ${fadeInUp} 1s ease-in-out;
 `;
 
 const Certificado = styled.div`
@@ -112,6 +139,10 @@ const Certificado = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2px;
+  }
+
+  p {
+    text-align: left;
   }
 `;
 
