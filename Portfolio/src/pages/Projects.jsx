@@ -28,12 +28,12 @@ const projects = [
     link: "https://lista-de-tareas-topaz.vercel.app/",
     language: ["html5", "css3-alt", "js"],
   },
-  {
-    name: "Store",
-    img: STORE_2,
-    link: "https://grant-movies.vercel.app/ ",
-    language: ["html5", "css3-alt", "js", "bootstrap"],
-  },
+  // {
+  //   name: "Store",
+  //   img: STORE_2,
+  //   link: "https://grant-movies.vercel.app/ ",
+  //   language: ["html5", "css3-alt", "js", "bootstrap"],
+  // },
   {
     name: "Landing",
     img: LANDING,
