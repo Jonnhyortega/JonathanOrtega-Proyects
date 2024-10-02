@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import STORE_1 from "../imgs/astrofy.jpeg";
-import STORE_2 from "../imgs/grantMovies.png";
+import STORE_2 from "../imgs/chulos-terrazos.png";
 import WORK_LIST from "../imgs/to-do-list.jpg";
 import LANDING from "../imgs/logo-goa-mma.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,14 +28,14 @@ const projects = [
     link: "https://lista-de-tareas-topaz.vercel.app/",
     language: ["html5", "css3-alt", "js"],
   },
-  // {
-  //   name: "Store",
-  //   img: STORE_2,
-  //   link: "https://grant-movies.vercel.app/ ",
-  //   language: ["html5", "css3-alt", "js", "bootstrap"],
-  // },
   {
-    name: "Landing",
+    name: "Landing Chulos",
+    img: STORE_2,
+    link: "https://chulitos.vercel.app/ ",
+    language: ["html5", "css3-alt", "js", "react"],
+  },
+  {
+    name: "Landing Goa",
     img: LANDING,
     link: "https://landing-goa.vercel.app/",
     language: ["html5", "css3-alt", "js", "react"],

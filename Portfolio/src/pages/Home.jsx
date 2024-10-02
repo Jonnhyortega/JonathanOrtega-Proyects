@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import cursor from "../imgs/cursor.png"
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ const HomeContainer = styled.div`
   text-alig: center;
   color: #ffffff;
   padding: 100px 0;
-
+  cursor: url(${cursor});
   div {
     display: flex;
     flex-direction: column;
