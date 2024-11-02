@@ -10,7 +10,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   --violetFull1: #4a235a;
   --violetFull2: #5b2c6f;
   --violetFull3: #6c3483;
@@ -24,6 +23,8 @@
   --silverFull5: #cacfd2;
   --silverFull6: #d7dbdd;
   --silverFull7: #e5e7e9;
+
+  --greenStyle: #00ff08;
 }
 
 #root {

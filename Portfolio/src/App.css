@@ -1,29 +1,4 @@
 
-:root {
-  --linear-gradientoso: linear-gradient(
-    to bottom,
-    var(--color1) 40%,
-    var(--color3) 60%,
-    var(--color5)
-  );
-  --linear-gradientoso2: linear-gradient(
-    to top,
-    var(--color1) 40%,
-    var(--color3) 60%,
-    var(--color5)
-  );
-  --gralColor: black;
-  --footerColor: linear-gradient(to bottom, #010101), #14e6dd;
-  --fontWeb: "Protest Guerrilla", sans-serif;
-  --roboto: "Roboto", sans-serif;
-  --gral-color-font: white;
-  --color1: #123e48;
-  --color2: #125258;
-  --color3: #127074;
-  --color4: #17a39c;
-  --color5: #20dbca;
-}
-
 #root {
   width: 100%;
   height: 100%;

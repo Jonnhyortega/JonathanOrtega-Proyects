@@ -1,5 +1,5 @@
 import STORE_1 from "../../imgs/astrofy.jpeg";
-import STORE_2 from "../../imgs/chulos-terrazos.png";
+import STORE_2 from "../../imgs/astrofy.jpeg";
 import WORK_LIST from "../../imgs/to-do-list.jpg";
 import LANDING from "../../imgs/logo-goa-mma.png";
 

@@ -15,7 +15,7 @@ import {
   HamburgerIcon,
   MenuOverlay,
 } from "./NavbarStyles";
-
+import background from "../../imgs/NavbarImg/nav2.jpg";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
