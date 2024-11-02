@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import cursor from "../imgs/cursor.png"
-const HomeContainer = styled.div`
+import { Link } from "react-router-dom";
+
+export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +9,6 @@ const HomeContainer = styled.div`
   text-alig: center;
   color: #ffffff;
   padding: 100px 0;
-  cursor: url(${cursor});
   div {
     display: flex;
     flex-direction: column;
@@ -18,7 +16,7 @@ const HomeContainer = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 2.5em;
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -44,7 +42,7 @@ const Title = styled.h1`
   }
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   padding: 1em;
   font-size: 1.5rem;
   font-weight: 200;
@@ -63,7 +61,7 @@ const Subtitle = styled.p`
   }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   padding: 10px 20px;
   font-size: 1.2rem;
   color: #fff;
@@ -78,18 +76,3 @@ const StyledLink = styled(Link)`
     background-color: #d17c07;
   }
 `;
-
-export const Home = () => {
-  return (
-    <HomeContainer>
-      <Title>Bienvenido a mi portafolio</Title>
-      <Subtitle>¡Descubre mis proyectos y ponte en contacto conmigo!</Subtitle>
-      <div>
-        <StyledLink to="/projects">Ver proyectos</StyledLink>
-        <StyledLink to="/contact">Contacto</StyledLink>
-      </div>
-    </HomeContainer>
-  );
-};
-
-export default Home;

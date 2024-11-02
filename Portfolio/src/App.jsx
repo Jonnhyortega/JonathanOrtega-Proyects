@@ -1,26 +1,15 @@
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-import { Projects } from './pages/Projects';
-import { Contact } from './pages/Contact';
-import { NoPage } from './pages/NoPage'
-import { Home } from './pages/Home'
-import './App.css'
-import Layout from "./components/Layout";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import AppRoutes from "./Routes/AppRoutes";
+import Navbar from "./components/Navbar/Navbar";
 function App() {
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='contact' element={<Contact/>}/>
-          <Route path='projects' element={<Projects/>}></Route>
-          <Route path='*' element={<NoPage/>}/>
-        </Route>
-      </Routes>
-   </BrowserRouter>
-   
-  )
+    <Layout>
+      <Navbar />
+      <AppRoutes />
+    </Layout>
+  );
 }
 
-export default App
+export default App;
