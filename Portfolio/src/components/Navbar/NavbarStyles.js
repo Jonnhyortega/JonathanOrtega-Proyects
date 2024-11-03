@@ -16,7 +16,6 @@ export const NavbarWrapper = styled.nav`
   z-index: 1099;
   border-radius: 1px;
   // box-shadow: 1px 1p x 15px 2px var(--violetFull1);
-  border: 1px solid var(--violetFull1);
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform: ${({ isOpen }) =>
     isOpen ? "translate(-100%, -0%)" : "translate(10%, 150%)"};
@@ -33,14 +32,18 @@ export const NavbarWrapper = styled.nav`
 export const HamburgerIcon = styled.div`
   position: fixed;
   top: 20px;
-  right: 20px;
-  z-index: 1100;
+  right: -5px;
+  z-index: 100;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--greenStyle);
   transition: 0.2s;
+  padding: .1em 1.5rem .1em 0.3rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: var(--violetFull1);
   &:hover {
-    transform: scale(1.1);
+    background: var(--violetFull5);
   }
 `;
 

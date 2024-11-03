@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.jsx
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +7,7 @@ import {
   faEnvelope,
   faFolder,
   faBars,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   NavbarWrapper,
@@ -15,7 +15,6 @@ import {
   HamburgerIcon,
   MenuOverlay,
 } from "./NavbarStyles";
-import background from "../../imgs/NavbarImg/nav2.jpg";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +24,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <HamburgerIcon onClick={toggleMenu}>
+      <HamburgerIcon
+        onClick={toggleMenu}
+      >
         {isOpen ? (
           <FontAwesomeIcon icon={faTimes} />
         ) : (

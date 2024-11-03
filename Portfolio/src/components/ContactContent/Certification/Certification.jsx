@@ -5,10 +5,12 @@ import {
   CertificationSection,
   CertificateCard,
   ButtonStack,
+  ButtonCertif,
 } from "./CertificationStyles";
 import certifDW from "../../../imgs/Certifications/CERTIF_DW.jpg";
 import certifJs from "../../../imgs/Certifications/CERTIF_JS.jpg";
 import certifReact from "../../../imgs/Certifications/REACT.jpg";
+import upcoming from "../../../imgs/Certifications/proximamente.jpeg"
 
 export const Certification = ({ handleImageClick }) => {
   return (
@@ -30,9 +32,10 @@ export const Certification = ({ handleImageClick }) => {
         <h3>Nucba - Full Stack</h3>
         <p>Stack MERN</p>
         <ButtonStack>
-          <button onClick={() => handleImageClick(certifDW)}>Responsive</button>
-          <button onClick={() => handleImageClick(certifJs)}>Javascript</button>
-          <button onClick={() => handleImageClick(certifReact)}>React</button>
+          <ButtonCertif onClick={() => handleImageClick(certifDW)}>Responsive</ButtonCertif>
+          <ButtonCertif onClick={() => handleImageClick(certifJs)}>Javascript</ButtonCertif>
+          <ButtonCertif onClick={() => handleImageClick(certifReact)}>React</ButtonCertif>
+          <ButtonCertif onClick={() => handleImageClick(upcoming)}>BackEnd</ButtonCertif>
         </ButtonStack>
         <small>Click en los botones para ver los certificados</small>
       </CertificateCard>

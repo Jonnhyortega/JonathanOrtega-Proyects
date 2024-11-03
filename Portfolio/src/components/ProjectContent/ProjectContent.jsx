@@ -1,48 +1,27 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { iconMap } from "./data";
-import { projects } from "./data";
-import {
-  ContainerProjects,
-  Title,
-  CardGrid,
-  Card,
-  CardImage,
-  CardContent,
-  CardTitle,
-  CardLanguages,
-  CardLink,
-} from "./ProjectContentStyles";
+import { iconMap } from "../../utils/data";
+import { projects } from "../../utils/data";
 
+import { Card } from "../CardProject/Card";
+import { ContainerProjects, Title } from "./ProjectContentStyles";
 export const ProjectContent = () => {
   return (
     <ContainerProjects>
       <Title>Proyectos</Title>
-      <CardGrid>
-        {projects.map((project, index) => (
-          <Card key={index}>
-            <CardImage src={project.img} alt={project.name} />
-            <CardContent>
-              <CardTitle>{project.name}</CardTitle>
-              <CardLink
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </CardLink>
-              <CardLanguages>
-                {project.language.map((lang, idx) => {
-                  const IconComponent = iconMap[lang];
-                  return <IconComponent key={idx} />;
-                })}
-              </CardLanguages>
-            </CardContent>
-          </Card>
-        ))}
-      </CardGrid>
+      {projects.map((project) => (
+        <Card
+          key={project.id}
+          cardLink={project.link}
+          cardGitHub={project.gitHub}
+          cardId={project.id}
+          cardImage={project.img}
+          cardTitle={project.name}
+          cardDescription={project.description}
+          cardLanguages={project.language}
+        />
+      ))}
     </ContainerProjects>
   );
 };
