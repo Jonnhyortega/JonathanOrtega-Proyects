@@ -28,11 +28,6 @@ export const HomeContainer = styled.div`
     justify-content: center;
     animation: ${fadeIn} 1.2s ease forwards;
   }
-
-  section {
-    width: 100%;
-    background: transparent;
-  }
 `;
 
 export const Title = styled.h1`

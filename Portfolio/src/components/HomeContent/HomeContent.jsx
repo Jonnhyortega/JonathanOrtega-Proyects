@@ -15,7 +15,6 @@ import {
   faReact,
   faNode,
 } from "@fortawesome/free-brands-svg-icons";
-import { ProjectHighlight } from "./ProjectHighlight/ProjectHighlight";
 export const HomeContent = () => {
   return (
     <HomeContainer >
@@ -47,9 +46,7 @@ export const HomeContent = () => {
         </SkillsList>
       </SkillsContainer>
 
-      <section>
-      <ProjectHighlight />
-      </section>
+      
     </HomeContainer>
   );
 };
