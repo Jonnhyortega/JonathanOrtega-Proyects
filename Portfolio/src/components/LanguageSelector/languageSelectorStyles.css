@@ -13,13 +13,13 @@
 }
 
 #LANGUAGE_ONBOARD.open {
-  left: 0; 
+  left: 0;
 }
 
 .toggle-button {
   position: fixed;
   top: 10px;
-  left: 20px;
+  left: 0;
   z-index: 1400;
   background-color: transparent;
   color: var(--greenStyle);

@@ -8,7 +8,7 @@ import eeuu from "../../imgs/Banderas/eeuu.png";
 import br from "../../imgs/Banderas/br.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-
+import {MenuOverlay} from "../Navbar/NavbarStyles"
 const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -91,6 +91,8 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
           <div className="tooltip">Alemania</div>
         </li>
       </ul>
+      <MenuOverlay isOpen={isOpen} onClick={toggleMenu} />
+
     </>
   );
 };
