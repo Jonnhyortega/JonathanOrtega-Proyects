@@ -33,7 +33,7 @@ export const HamburgerIcon = styled.div`
   top: 10px;
   right: -5px;
   z-index: 100;
-  font-size: 1.5rem;
+  font-size: 27.2px;
   cursor: pointer;
   color: var(--greenStyle);
   transition: 0.2s;

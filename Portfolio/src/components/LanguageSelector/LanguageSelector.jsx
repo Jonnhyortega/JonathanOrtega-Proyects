@@ -8,15 +8,17 @@ import eeuu from "../../imgs/Banderas/eeuu.png";
 import br from "../../imgs/Banderas/br.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import {MenuOverlay} from "../Navbar/NavbarStyles"
-const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
-  const { t } = useTranslation();
-  const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
+import { MenuOverlay } from "../Navbar/NavbarStyles";
+import { useLanguage } from "../../context/LanguageContext";
 
-  const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language);
-    setCurrentLanguage(language);
+const LanguageSelector = () => {
+  const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const { changeLanguage, currentLanguage } = useLanguage();
+
+  const handleLanguageChange = (lang) => {
+    changeLanguage(lang);
+    toggleMenu()
   };
 
   const toggleMenu = () => {
@@ -34,11 +36,12 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
           <a
             aria-label="Argentina"
             data-social="Argentina"
-            onClick={() => handleLanguageChange("es")}
+            onClick={() => 
+              handleLanguageChange("es")}
             disabled={currentLanguage === "es"}
-          >
+          >{t("Español")}
             <div className="filled"></div>
-            <img src={arg} alt="Bandera Argentina" />
+            {/* <img src={arg} alt="Bandera Argentina" /> */}
           </a>
           <div className="tooltip">Argentina</div>
         </li>
@@ -50,7 +53,8 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
             disabled={currentLanguage === "en"}
           >
             <div className="filled"></div>
-            <img src={eeuu} alt="Bandera EE.UU" />
+            {/* <img src={eeuu} alt="Bandera EE.UU" /> */}
+            {t("Ingles")}
           </a>
           <div className="tooltip">EE.UU</div>
         </li>
@@ -62,7 +66,8 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
             data-social="Brasil"
           >
             <div className="filled"></div>
-            <img src={br} alt="Bandera Brasil" />
+            {/* <img src={br} alt="Bandera Brasil" /> */}
+            {t("Brasil")}
           </a>
           <div className="tooltip">Brasil</div>
         </li>
@@ -74,7 +79,8 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
             data-social="China"
           >
             <div className="filled"></div>
-            <img src={china} alt="Bandera de China" />
+            {t("China")}
+            {/* <img src={china} alt="Bandera de China" /> */}
           </a>
           <div className="tooltip">China</div>
         </li>
@@ -84,15 +90,14 @@ const LanguageSelector = ({ currentLanguage, setCurrentLanguage }) => {
             disabled={currentLanguage === "de"}
             aria-label="Alemania"
             data-social="Alemania"
-          >
+          >{t("Alemania")}
             <div className="filled"></div>
-            <img src={de} alt="Bandera Alemania" />
+            {/* <img src={de} alt="Bandera Alemania" /> */}
           </a>
           <div className="tooltip">Alemania</div>
         </li>
       </ul>
       <MenuOverlay isOpen={isOpen} onClick={toggleMenu} />
-
     </>
   );
 };

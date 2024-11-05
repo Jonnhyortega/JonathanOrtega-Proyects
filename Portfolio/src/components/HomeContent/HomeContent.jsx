@@ -23,8 +23,9 @@ export const HomeContent = () => {
 
   return (
     <HomeContainer>
+      <Subtitle>{t("Bienvenido al")}</Subtitle>
       <Title>{t("Portafolios")}</Title>
-      <Subtitle>{t("Bienvenido")}</Subtitle>
+      <Subtitle>{t("Desarrollador de aplicaciones web")}</Subtitle>
       <div>
         <StyledLink to="/projects">{t("Ver proyectos")}</StyledLink>
         <StyledLink to="/contact">{t("Contacto")}</StyledLink>

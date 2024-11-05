@@ -128,7 +128,8 @@ export const CardText = styled.p`
 export const CardLanguages = styled.div`
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  align-items: end;
   gap: 2px;
   color: var(--greenStyle);
   font-size: 2em;

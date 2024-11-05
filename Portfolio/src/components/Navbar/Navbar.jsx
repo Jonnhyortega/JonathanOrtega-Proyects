@@ -33,6 +33,7 @@ export const Navbar = () => {
           <FontAwesomeIcon icon={faBars} />
         )}
       </HamburgerIcon>
+      
       <MenuOverlay isOpen={isOpen} onClick={toggleMenu} />
       <NavbarWrapper isOpen={isOpen}>
         <NavLink to="/" onClick={toggleMenu}>

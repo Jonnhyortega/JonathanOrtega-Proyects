@@ -2,33 +2,48 @@
   list-style: none;
   margin: 1rem;
   position: fixed;
-  top: 35px;
-  left: -250px;
+  top: 120px;
+  right: -250px;
   z-index: 1300;
   background-color: transparent;
   padding: 1em;
   height: auto;
   width: auto;
-  transition: left 0.6s ease;
+  transition: right 0.6s ease;
 }
 
 #LANGUAGE_ONBOARD.open {
-  left: 0;
+  right: -40px;
+  border-left: 2px solid var(--violetFull5);
+  border-top: 2px solid var(--violetFull5);
+  border-bottom: 2px solid var(--violetFull5);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 108px;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  /* background-color: var(--violetFull5); */
 }
 
 .toggle-button {
   position: fixed;
-  top: 10px;
-  left: 0;
-  z-index: 1400;
+  top: 70px;
+  right: 40px;
+  text-align: center;
+  z-index: 1098;
   background-color: transparent;
+  width: 2px;
   color: var(--greenStyle);
   border: none;
-  padding: 0.1em 1.5em 0.1em 0.3em;
+  padding: 0;
   font-size: 24px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .toggle-button:hover {
@@ -44,12 +59,14 @@
 .example-2 {
   display: flex;
   flex-direction: column;
+  z-index: 2000;
 }
 
 .example-2 .icon-content {
   margin: 10px 0;
   position: relative;
   cursor: pointer;
+  width: 90px;
 }
 
 .example-2 .icon-content .tooltip {
@@ -72,12 +89,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 70px;
   height: 50px;
   border-radius: 20%;
   background-color: transparent;
-  /* border: 1px solid grey; */
   transition: all 0.3s ease-in-out;
+  color: white;
 }
 
 .example-2 .icon-content a:hover {
@@ -108,7 +125,6 @@
   height: 100%;
 }
 
-/* Estilos de fondo para cada bandera */
 .example-2 .icon-content a[data-social="Argentina"] .filled,
 .example-2 .icon-content a[data-social="Argentina"] ~ .tooltip {
   background: linear-gradient(
@@ -121,15 +137,12 @@
 
 .example-2 .icon-content a[data-social="EEUU"] .filled,
 .example-2 .icon-content a[data-social="EEUU"] ~ .tooltip {
-  background: radial-gradient(
-    circle at center,
-    #3c3b6e 25%,
-    white 35%,
-    #b22234 45%,
-    white 55%,
-    #b22234 65%,
-    white 75%,
-    #b22234 85%
+  background: repeating-linear-gradient(
+    to bottom,
+    #b22234,
+    /* Rojo */ #b22234 10%,
+    white 10%,
+    white 20%
   );
 }
 
@@ -145,7 +158,7 @@
 
 .example-2 .icon-content a[data-social="China"] .filled,
 .example-2 .icon-content a[data-social="China"] ~ .tooltip {
-  background: radial-gradient(circle at center, #ffde00 15%, #de2910 100%);
+  background: linear-gradient(to right, #de2910 80%, #de2910 80%, #ffde00 20%);
 }
 
 .example-2 .icon-content a[data-social="Alemania"] .filled,

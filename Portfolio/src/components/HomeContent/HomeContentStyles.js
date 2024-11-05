@@ -33,7 +33,7 @@ export const HomeContainer = styled.div`
 export const Title = styled.h1`
   font-size: 2.5rem;
   color: var(--violetFull5);
-  margin-top: 60px;
+  margin: 0;
   margin-bottom: 0;
   animation: ${fadeIn} 0.6s ease forwards;
   transition: color 0.3s ease;
