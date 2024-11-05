@@ -29,17 +29,17 @@ export const NavbarWrapper = styled.nav`
 `;
 
 export const HamburgerIcon = styled.div`
-  position: fixed;
+  position: absolute;
   top: 10px;
-  right: -5px;
+  right: 0;
   z-index: 100;
-  font-size: 27.2px;
+  font-size: 1.3em;
+  font-weight: 300;
   cursor: pointer;
   color: var(--greenStyle);
   transition: 0.2s;
-  padding: 0.1em 1.5em 0.1em 0.3em;
+  padding: .1em .5em;
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   background: var(--violetFull1);
   &:hover {
     background: var(--violetFull5);

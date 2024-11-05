@@ -6,6 +6,7 @@ import {
   StyledLink,
   SkillsContainer,
   SkillsList,
+  Text
 } from "./HomeContentStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,7 +26,7 @@ export const HomeContent = () => {
     <HomeContainer>
       <Subtitle>{t("Bienvenido al")}</Subtitle>
       <Title>{t("Portafolios")}</Title>
-      <Subtitle>{t("Desarrollador de aplicaciones web")}</Subtitle>
+      <Text>{t("Desarrollador de aplicaciones web")}</Text>
       <div>
         <StyledLink to="/projects">{t("Ver proyectos")}</StyledLink>
         <StyledLink to="/contact">{t("Contacto")}</StyledLink>

@@ -14,40 +14,39 @@
 
 #LANGUAGE_ONBOARD.open {
   right: -40px;
-  border-left: 2px solid var(--violetFull5);
-  border-top: 2px solid var(--violetFull5);
-  border-bottom: 2px solid var(--violetFull5);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 108px;
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  /* background-color: var(--violetFull5); */
+  background-color: transparent;
 }
 
 .toggle-button {
-  position: fixed;
-  top: 70px;
-  right: 40px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
   text-align: center;
   z-index: 1098;
-  background-color: transparent;
-  width: 2px;
-  color: var(--greenStyle);
   border: none;
-  padding: 0;
-  font-size: 24px;
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+  font-size: 1.3em;
+  font-weight: 300;
+  cursor: pointer;
+  color: var(--greenStyle);
+  padding: .2em;
+  border-bottom-left-radius: 5px;
+  background: var(--violetFull1);
+
+  &:hover {
+    background: gold;
+  }
 }
 
 .toggle-button:hover {
   color: var(--violetFull5);
+}
+.iconLanguage {
+  font-size: 1em;
 }
 
 .toggle-button > p {
@@ -106,7 +105,7 @@
   z-index: 1;
   width: 30px;
   height: 30px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 50%;
 }
 
@@ -140,7 +139,7 @@
   background: repeating-linear-gradient(
     to bottom,
     #b22234,
-    /* Rojo */ #b22234 10%,
+    #b22234 10%,
     white 10%,
     white 20%
   );
@@ -158,7 +157,7 @@
 
 .example-2 .icon-content a[data-social="China"] .filled,
 .example-2 .icon-content a[data-social="China"] ~ .tooltip {
-  background: linear-gradient(to right, #de2910 80%, #de2910 80%, #ffde00 20%);
+  background: linear-gradient(to right, #ff0000 80%, #de2910 80%, #ffde00 20%);
 }
 
 .example-2 .icon-content a[data-social="Alemania"] .filled,

@@ -1,10 +1,12 @@
 {
+  "Inicio":"Home",
+  "Proyectos":"Projects",
   "Español": "Spanish",
   "Ingles":"English",
   "Brasil":"Brazil",
   "Alemania":"Germany",
   "China":"China",
-  "Elegir idioma": "Choose language",
+  "Elegir idioma": "Language",
   "Portafolios": "Jonnhy's Portfolio",
   "Bienvenido al": "Welcome to",
   "Desarrollador de aplicaciones web":"Web aplication developer",

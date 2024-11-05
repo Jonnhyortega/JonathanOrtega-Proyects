@@ -18,7 +18,7 @@ const LanguageSelector = () => {
 
   const handleLanguageChange = (lang) => {
     changeLanguage(lang);
-    toggleMenu()
+    toggleMenu();
   };
 
   const toggleMenu = () => {
@@ -28,20 +28,19 @@ const LanguageSelector = () => {
   return (
     <>
       <button className="toggle-button" onClick={toggleMenu}>
-        <FontAwesomeIcon className="iconLanguage" icon={faGlobe} />
-        <p>{t("Elegir idioma")}</p>
+        {/* <FontAwesomeIcon className="iconLanguage" icon={faGlobe} /> */}
+        {t("Elegir idioma")}
       </button>
       <ul id="LANGUAGE_ONBOARD" className={`example-2 ${isOpen ? "open" : ""}`}>
         <li className="icon-content">
           <a
             aria-label="Argentina"
             data-social="Argentina"
-            onClick={() => 
-              handleLanguageChange("es")}
+            onClick={() => handleLanguageChange("es")}
             disabled={currentLanguage === "es"}
-          >{t("Español")}
+          >
             <div className="filled"></div>
-            {/* <img src={arg} alt="Bandera Argentina" /> */}
+          <img src={arg} alt="Bandera EE.UU" />
           </a>
           <div className="tooltip">Argentina</div>
         </li>
@@ -53,8 +52,7 @@ const LanguageSelector = () => {
             disabled={currentLanguage === "en"}
           >
             <div className="filled"></div>
-            {/* <img src={eeuu} alt="Bandera EE.UU" /> */}
-            {t("Ingles")}
+            <img src={eeuu} alt="Bandera EE.UU" />
           </a>
           <div className="tooltip">EE.UU</div>
         </li>
@@ -66,8 +64,7 @@ const LanguageSelector = () => {
             data-social="Brasil"
           >
             <div className="filled"></div>
-            {/* <img src={br} alt="Bandera Brasil" /> */}
-            {t("Brasil")}
+            <img src={br} alt="Bandera Brasil" />
           </a>
           <div className="tooltip">Brasil</div>
         </li>
@@ -79,8 +76,8 @@ const LanguageSelector = () => {
             data-social="China"
           >
             <div className="filled"></div>
-            {t("China")}
-            {/* <img src={china} alt="Bandera de China" /> */}
+
+            <img src={china} alt="Bandera de China" />
           </a>
           <div className="tooltip">China</div>
         </li>
@@ -90,9 +87,9 @@ const LanguageSelector = () => {
             disabled={currentLanguage === "de"}
             aria-label="Alemania"
             data-social="Alemania"
-          >{t("Alemania")}
+          >
             <div className="filled"></div>
-            {/* <img src={de} alt="Bandera Alemania" /> */}
+            <img src={de} alt="Bandera Alemania" />
           </a>
           <div className="tooltip">Alemania</div>
         </li>

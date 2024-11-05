@@ -15,9 +15,10 @@ import {
   HamburgerIcon,
   MenuOverlay,
 } from "./NavbarStyles";
+import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const {t}=useTranslation()
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -27,26 +28,27 @@ export const Navbar = () => {
       <HamburgerIcon
         onClick={toggleMenu}
       >
-        {isOpen ? (
+        {/* {isOpen ? (
           <FontAwesomeIcon icon={faTimes} />
         ) : (
           <FontAwesomeIcon icon={faBars} />
-        )}
+        )} */}
+        Menu
       </HamburgerIcon>
       
       <MenuOverlay isOpen={isOpen} onClick={toggleMenu} />
       <NavbarWrapper isOpen={isOpen}>
         <NavLink to="/" onClick={toggleMenu}>
           {/* <FontAwesomeIcon icon={faHome} /> */}
-          Inicio
+          {t("Inicio")}
         </NavLink>
         <NavLink to="/contact" onClick={toggleMenu}>
           {/* <FontAwesomeIcon icon={faEnvelope} /> */}
-          Contactar
+          {t("Contacto")}
         </NavLink>
         <NavLink to="/projects" onClick={toggleMenu}>
           {/* <FontAwesomeIcon icon={faFolder} /> */}
-          Proyectos
+          {t("Proyectos")}
         </NavLink>
       </NavbarWrapper>
     </>

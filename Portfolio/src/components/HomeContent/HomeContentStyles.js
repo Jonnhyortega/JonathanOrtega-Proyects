@@ -44,10 +44,16 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
+  margin-top: 4.5em;
   font-size: 1.5rem;
   font-weight: 200;
   color: var(--greenStyle);
-  margin: 0;
+  animation: ${fadeIn} 0.8s ease forwards;
+`;
+export const Text = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--greenStyle);
   animation: ${fadeIn} 0.8s ease forwards;
 `;
 

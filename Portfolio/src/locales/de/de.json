@@ -1,10 +1,12 @@
 {
+  "Inicio":"Start",
+  "Proyectos":"Projekte",
   "Español":"Spanisch",
   "Ingles":"Englisch",
   "Brasil":"Brasilien",
   "Alemania":"Deutschland",
   "China":"China",
-  "Elegir idioma": "Sprache wählen",
+  "Elegir idioma": "Sprache",
   "Portafolios": "Jonnys Brieftasche",
   "Bienvenido al": "Willkommen im",
   "Desarrollador de aplicaciones web":"Webanwendungsentwickler",
