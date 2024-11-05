@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import cv from "./CV.pdf";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 const LinkDownload = styled.a`
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -13,9 +14,10 @@ const LinkDownload = styled.a`
 
 `;
 export const DownloadCVButton = () => {
+  const {t} = useTranslation()
   return (
     <LinkDownload href={cv} download={cv}>
-      Descargar CV {""}
+      {t("Descargar CV")} {""}
       <FontAwesomeIcon icon={faFile} />
     </LinkDownload>
   );

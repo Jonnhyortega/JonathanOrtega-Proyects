@@ -14,6 +14,7 @@ import {
 } from "./CardStyles";
 import { iconMap } from "../../utils/data";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Card = ({
   cardId,
@@ -24,7 +25,9 @@ export const Card = ({
   cardGitHub,
   cardLanguages,
 }) => {
-  const location = useLocation()
+  const location = useLocation();
+  const { t } = useTranslation();
+
   const redirectVercel = () => {
     window.open(cardLink);
   };
@@ -33,13 +36,16 @@ export const Card = ({
   };
 
   return (
-    <CardWrapper 
-    style={{border: location.pathname == "/" ? "1px solid var(--violetFull5)" : "none"}}
-    key={cardId}>
-      <CardImage src={cardImage} alt={cardTitle} />
+    <CardWrapper
+      style={{
+        border: location.pathname === "/" ? "1px solid var(--violetFull5)" : "none"
+      }}
+      key={cardId}
+    >
+      <CardImage src={cardImage} alt={t(`projects.${cardTitle}.name`)} />
       <CardContent>
-        <CardTitle>{cardTitle}</CardTitle>
-        <CardText>{cardDescription}</CardText>
+        <CardTitle>{t(cardTitle)}</CardTitle>
+        <CardText>{t(cardDescription)}</CardText>
 
         <ButtonsDiv>
           <CardButton onClick={redirectVercel}>
@@ -50,14 +56,15 @@ export const Card = ({
           </CardButton>
 
           <CardLanguages>
-              {cardLanguages.map((lang, idx) => {
-                const IconComponent = iconMap[lang];
-                return <IconComponent key={idx} />;
-              })}
+            {cardLanguages.map((lang, idx) => {
+              const IconComponent = iconMap[lang];
+              return <IconComponent key={idx} />;
+            })}
           </CardLanguages>
         </ButtonsDiv>
       </CardContent>
     </CardWrapper>
   );
 };
+
 export default Card;

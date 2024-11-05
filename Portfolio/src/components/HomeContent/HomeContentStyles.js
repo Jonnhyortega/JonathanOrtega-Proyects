@@ -75,6 +75,7 @@ export const SkillsContainer = styled.div`
   justify-content: center;
   margin: 20px 0;
   width: 100%;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(74, 35, 90, 1) 0%,
@@ -129,6 +130,9 @@ export const SkillsList = styled.ul`
     }
     &:nth-child(5) {
       color: green;
+    }
+    &:nth-child(6) {
+      color: black;
     }
   }
 `;

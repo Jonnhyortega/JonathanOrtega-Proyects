@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Landing Goa",
+    name: "Goa academia de artes marciales",
     img: GOA,
     gitHub: "https://github.com/Jonnhyortega/Landing",
     link: "https://landing-goa.vercel.app/",

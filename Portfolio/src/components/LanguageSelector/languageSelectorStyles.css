@@ -1,0 +1,154 @@
+#LANGUAGE_ONBOARD {
+  list-style: none;
+  margin: 1rem;
+  position: fixed;
+  top: 35px;
+  left: -250px;
+  z-index: 1300;
+  background-color: transparent;
+  padding: 1em;
+  height: auto;
+  width: auto;
+  transition: left 0.6s ease;
+}
+
+#LANGUAGE_ONBOARD.open {
+  left: 0; 
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 1400;
+  background-color: transparent;
+  color: var(--greenStyle);
+  border: none;
+  padding: 0.1em 1.5em 0.1em 0.3em;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toggle-button:hover {
+  color: var(--violetFull5);
+}
+
+.toggle-button > p {
+  font-size: 0.5em;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.example-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-2 .icon-content {
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  background-color: transparent;
+  /* border: 1px solid grey; */
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+
+.example-2 .icon-content a img {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+/* Estilos de fondo para cada bandera */
+.example-2 .icon-content a[data-social="Argentina"] .filled,
+.example-2 .icon-content a[data-social="Argentina"] ~ .tooltip {
+  background: linear-gradient(
+    to bottom,
+    #74acdf 33.33%,
+    white 33.33% 66.66%,
+    #74acdf 66.66%
+  );
+}
+
+.example-2 .icon-content a[data-social="EEUU"] .filled,
+.example-2 .icon-content a[data-social="EEUU"] ~ .tooltip {
+  background: radial-gradient(
+    circle at center,
+    #3c3b6e 25%,
+    white 35%,
+    #b22234 45%,
+    white 55%,
+    #b22234 65%,
+    white 75%,
+    #b22234 85%
+  );
+}
+
+.example-2 .icon-content a[data-social="Brasil"] .filled,
+.example-2 .icon-content a[data-social="Brasil"] ~ .tooltip {
+  background: radial-gradient(
+    circle at center,
+    #002776 20%,
+    #f7d117 40%,
+    #009739 70%
+  );
+}
+
+.example-2 .icon-content a[data-social="China"] .filled,
+.example-2 .icon-content a[data-social="China"] ~ .tooltip {
+  background: radial-gradient(circle at center, #ffde00 15%, #de2910 100%);
+}
+
+.example-2 .icon-content a[data-social="Alemania"] .filled,
+.example-2 .icon-content a[data-social="Alemania"] ~ .tooltip {
+  background: linear-gradient(to top, black 33.33%, red 53.33%, yellow 66.66%);
+}

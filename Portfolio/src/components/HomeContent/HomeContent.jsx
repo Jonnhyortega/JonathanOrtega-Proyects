@@ -14,19 +14,24 @@ import {
   faHtml5,
   faReact,
   faNode,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
+
 export const HomeContent = () => {
+  const { t } = useTranslation();
+
   return (
-    <HomeContainer >
-      <Title>Portafolios de Jonathan</Title>
-      <Subtitle>Bienvenido</Subtitle>
+    <HomeContainer>
+      <Title>{t("Portafolios")}</Title>
+      <Subtitle>{t("Bienvenido")}</Subtitle>
       <div>
-        <StyledLink to="/projects">Ver proyectos</StyledLink>
-        <StyledLink to="/contact">Contacto</StyledLink>
+        <StyledLink to="/projects">{t("Ver proyectos")}</StyledLink>
+        <StyledLink to="/contact">{t("Contacto")}</StyledLink>
       </div>
 
       <SkillsContainer>
-        <h3>Tecnologias que mejor domino</h3>
+        <h3>{t("Tecnologias preferidas")}</h3>
         <SkillsList>
           <li>
             <FontAwesomeIcon icon={faJs} />
@@ -43,10 +48,11 @@ export const HomeContent = () => {
           <li>
             <FontAwesomeIcon icon={faNode} />
           </li>
+          <li>
+            <FontAwesomeIcon icon={faGithub} />
+          </li>
         </SkillsList>
       </SkillsContainer>
-
-      
     </HomeContainer>
   );
 };

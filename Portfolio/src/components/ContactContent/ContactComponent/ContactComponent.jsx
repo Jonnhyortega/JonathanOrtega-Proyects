@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCopy, faEye } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -14,26 +14,16 @@ import {
 } from "./ContactComponentStyles";
 import profilePhoto from "../../../imgs/img-perfil.jpg";
 import DownloadCVButton from "../../DownloadButton/DownloadButton";
+import { useTranslation } from "react-i18next";
 
 export const ContactComponent = () => {
-  const [showNotification, setShowNotification] = useState(false);
+  const { t } = useTranslation();
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        setShowNotification(true);
-        setTimeout(() => setShowNotification(false), 3000);
-      })
-      .catch((err) => {
-        alert("Error al copiar el correo: ", err);
-      });
-  };
   return (
     <ContactSection>
-      <h2>Contacto</h2>
+      <h2>{t("Contacto")}</h2>
       <ImgPerfil src={profilePhoto} alt="Profile" />
-      <p>Plataformas de interés</p>
+      <p>{t("Plataformas de interés")}</p>
       <IconContainer>
         <a href="mailto:jonnhyortega@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
@@ -57,16 +47,6 @@ export const ContactComponent = () => {
         </a>
       </IconContainer>
       <DownloadCVButton />
-        {/* <p>jonnhyortega@gmail.com</p> */}
-      <EmailSection>
-        
-      </EmailSection>
-
-      {showNotification && (
-        <div className="notification">
-          Correo copiado al portapapeles, espero tu mensaje 👌😎
-        </div>
-      )}
     </ContactSection>
   );
 };
