@@ -13,7 +13,6 @@ import {
   CardLanguages,
 } from "./CardStyles";
 import { iconMap } from "../../utils/data";
-import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const Card = ({
@@ -42,9 +41,11 @@ export const Card = ({
         <CardText>{t(cardDescription)}</CardText>
 
         <ButtonsDiv>
-          <CardButton onClick={redirectVercel}>
-            <FontAwesomeIcon icon={faLink} />
-          </CardButton>
+          {cardTitle !== "Portafolios" ? (
+            <CardButton onClick={redirectVercel}>
+              <FontAwesomeIcon icon={faLink} />
+            </CardButton>
+          ) : null}
           <CardButton onClick={redirectGitHub}>
             <FontAwesomeIcon icon={faGithub} />
           </CardButton>

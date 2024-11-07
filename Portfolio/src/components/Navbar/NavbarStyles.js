@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const NavButtons = styled.div`
   width: 220px;
   margin: 0 auto;
-  border-bottom: 1px solid var(--violetFull5);
+  // border-bottom: 1px solid var(--violetFull5);
   display: flex;
   gap: 20px;
   align-items: start;

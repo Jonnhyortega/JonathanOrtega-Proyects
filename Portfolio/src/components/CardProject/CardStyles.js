@@ -47,11 +47,11 @@ export const CardWrapper = styled.div`
   border: 1px solid var(--violetFull5);
   border-radius: 5px;
 
-  &:hover{
-  box-shadow: 1px -1px 7px var(--violetFull5);
+  &:hover {
+    box-shadow: 1px -1px 7px var(--violetFull5);
   }
 
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
     border-radius: 0;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ export const CardImage = styled.img`
     border-top-right-radius: 10px;
   }
 
-   @media (max-width: 568px) {
+  @media (max-width: 568px) {
     width: 250px;
   }
 `;
@@ -97,7 +97,6 @@ export const CardContent = styled.div`
     width: 100%;
     text-align: center;
     padding: 5px;
-
   }
 `;
 
@@ -131,7 +130,7 @@ export const CardText = styled.p`
   animation: ${fadeIn} 0.8s 0.8s ease forwards;
 
   @media (max-width: 480px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -149,7 +148,7 @@ export const ButtonsDiv = styled.div`
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-around;
   animation: ${fadeIn} 0.8s 0.8s ease forwards;
 `;
 
@@ -157,15 +156,18 @@ export const CardButton = styled.button`
   align-self: center;
   z-index: 1;
   position: relative;
-  color: var(--greenStyle);
-  font-size: 1.7em;
+  color: grey;
+  font-size: 1.9em;
   border: none;
   border-radius: 5px;
   padding: 0.1em 0.2em;
   overflow: hidden;
-  transition: color 0.4s ease-in-out;
+  transition: color 0.8s ease-in-out;
   animation: ${fadeIn} 0.8s 1s ease forwards;
   background: transparent;
+  width: 50px;
+  text-align:center;
+  
 
   &::before {
     content: "";
@@ -179,7 +181,7 @@ export const CardButton = styled.button`
     background-color: var(--greenStyle);
     transform-origin: center;
     transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-    transition: transform 0.45s ease-in-out;
+    transition: transform 1s ease-in-out;
   }
 
   &:hover {

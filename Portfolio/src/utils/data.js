@@ -3,7 +3,7 @@ import CHULOS_IMG from "../imgs/ProjectsImgs/ChulosDesign/Logo.png";
 import WORK_LIST from "../imgs/ProjectsImgs/WorkList/workList.jpeg";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
-import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg"
+import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg";
 import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact } from "react-icons/fa";
 
 export const iconMap = {
@@ -17,22 +17,22 @@ export const iconMap = {
 export const projects = [
   {
     id: 1,
-    name: "Astral Vision",
-    img: AstralVision,
-    gitHub: "https://github.com/Jonnhyortega/astralvision",
-    link: "https://astralvision.vercel.app/",
-    description:
-      "Sitio web con fines academicos. Implementacion de React Router Dom y styled components.",
-    language: ["html5", "css3-alt", "js", "react"],
-  },
-  {
-    id: 2,
     name: "Landing Chulos",
     img: CHULOS_IMG,
     gitHub: "https://github.com/Jonnhyortega/landingchulos",
     link: "https://chulosdesign.com/",
     description:
       "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
+    language: ["html5", "css3-alt", "js", "react"],
+  },
+  {
+    id: 2,
+    name: "Astral Vision",
+    img: AstralVision,
+    gitHub: "https://github.com/Jonnhyortega/astralvision",
+    link: "https://astralvision.vercel.app/",
+    description:
+      "Sitio web con fines academicos. Implementacion de React Router Dom y styled components.",
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
@@ -47,7 +47,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Portfolios",
+    name: "Portafolios personal",
     img: Portfolio,
     gitHub: "https://github.com/Jonnhyortega/JonathanOrtega-Proyects",
     link: "https:/www.jonnhyortegadev.com/",
