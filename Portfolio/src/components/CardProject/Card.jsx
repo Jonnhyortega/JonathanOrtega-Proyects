@@ -41,7 +41,7 @@ export const Card = ({
         <CardText>{t(cardDescription)}</CardText>
 
         <ButtonsDiv>
-          {cardTitle !== "Portafolios" ? (
+          {cardTitle !== "Portafolios personal" ? (
             <CardButton onClick={redirectVercel}>
               <FontAwesomeIcon icon={faLink} />
             </CardButton>
