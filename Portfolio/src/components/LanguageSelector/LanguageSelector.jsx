@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { MenuOverlay } from "../Navbar/NavbarStyles";
 import { useLanguage } from "../../context/LanguageContext";
+import Button from "../Button3D/Button";
 
 const LanguageSelector = () => {
   const { t } = useTranslation();
@@ -27,10 +28,11 @@ const LanguageSelector = () => {
 
   return (
     <>
-      <button className="toggle-button" onClick={toggleMenu}>
-        {/* <FontAwesomeIcon className="iconLanguage" icon={faGlobe} /> */}
+      <Button text={"Idioma"} onClick={toggleMenu} />
+      {/* <button className="toggle-button" onClick={toggleMenu}>
+        <FontAwesomeIcon className="iconLanguage" icon={faGlobe} />
         {t("Elegir idioma")}
-      </button>
+      </button> */}
       <ul id="LANGUAGE_ONBOARD" className={`example-2 ${isOpen ? "open" : ""}`}>
         <li className="icon-content">
           <a
@@ -40,7 +42,7 @@ const LanguageSelector = () => {
             disabled={currentLanguage === "es"}
           >
             <div className="filled"></div>
-          <img src={arg} alt="Bandera EE.UU" />
+            <img src={arg} alt="Bandera EE.UU" />
           </a>
           <div className="tooltip">Argentina</div>
         </li>

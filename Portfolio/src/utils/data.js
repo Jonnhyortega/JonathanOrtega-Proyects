@@ -21,7 +21,7 @@ export const projects = [
     gitHub: "https://github.com/Jonnhyortega/astralvision",
     link: "https://astralvision.vercel.app/",
     description:
-      "Sitio web con fines academicos. Implementacion de React Router Dom.",
+      "Sitio web con fines academicos. Implementacion de React Router Dom y styled components.",
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
@@ -29,9 +29,9 @@ export const projects = [
     name: "Landing Chulos",
     img: CHULOS_IMG,
     gitHub: "https://github.com/Jonnhyortega/landingchulos",
-    link: "https://landingchulos.vercel.app/ ",
+    link: "https://chulosdesign.com/",
     description:
-      "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario. Proximo a deployar.",
+      "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
     language: ["html5", "css3-alt", "js", "react"],
   },
   {

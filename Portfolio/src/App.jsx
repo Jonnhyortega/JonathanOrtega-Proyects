@@ -15,10 +15,10 @@ function App() {
     <Layout>
       <LanguageProvider>
         <Navbar />
-        <LanguageSelector
+        {/* <LanguageSelector
           currentLanguage={currentLanguage}
           setCurrentLanguage={setCurrentLanguage}
-        />
+        /> */}
         <AppRoutes />
       </LanguageProvider>
     </Layout>

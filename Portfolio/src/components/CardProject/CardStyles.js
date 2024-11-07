@@ -44,6 +44,8 @@ export const CardWrapper = styled.div`
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   animation: ${scaleUp} 0.8s ease forwards, ${fadeIn} 1s ease forwards;
   margin: 0;
+  border: 1px solid var(--violetFull5);
+
   border-radius: 4px;
   &:hover {
     transform: translateY(-5px);
@@ -51,7 +53,6 @@ export const CardWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    border: none;
     border-radius: 0;
     flex-direction: column;
     align-items: center;
@@ -79,6 +80,10 @@ export const CardImage = styled.img`
     border-radius: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+   @media (max-width: 568px) {
+    width: 250px;
   }
 `;
 
@@ -128,21 +133,17 @@ export const CardText = styled.p`
 export const CardLanguages = styled.div`
   margin: 0;
   display: flex;
-  justify-content: end;
-  align-items: end;
-  gap: 2px;
+  gap: 10px;
   color: var(--greenStyle);
   font-size: 2em;
-  border: 1px solid var(--greenStyle);
   border-radius: 5px;
-  padding: 0.3em 1em;
 `;
 
 export const ButtonsDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   animation: ${fadeIn} 0.8s 0.8s ease forwards;
 `;
@@ -152,10 +153,10 @@ export const CardButton = styled.button`
   z-index: 1;
   position: relative;
   color: var(--greenStyle);
-  font-size: 2em;
-  border: 1px solid var(--greenStyle);
+  font-size: 1.7em;
+  border: none;
   border-radius: 5px;
-  padding: 0.2em 1em;
+  padding: 0.1em 0.2em;
   overflow: hidden;
   transition: color 0.4s ease-in-out;
   animation: ${fadeIn} 0.8s 1s ease forwards;

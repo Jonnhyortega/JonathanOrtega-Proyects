@@ -22,11 +22,7 @@ export const ContainerProjects = styled.div`
   animation: ${fadeIn} 1s ease-in-out;
   width: 100%;
   background: transparent;
-  padding: 20px 0;
-  background-image: url(${backgroundHome});
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  padding: 50px 0;
 `;
 
 export const Title = styled.h2`
@@ -35,11 +31,13 @@ export const Title = styled.h2`
   border-bottom: 2px solid;
   font-size: 3.5em;
   text-align: justify;
-text-shadow:
-    -1px -1px 0 var(--greenStyle), 
-     1px -1px 0 var(--greenStyle), 
-    -1px  1px 0 var(--greenStyle), 
-     1px  1px 0 var(--greenStyle); 
-}
+
   animation: ${fadeIn} 1s ease-in-out;
+
+  @media (max-width: 568px) {
+    font-size: 2.8em;
+  }
+  @media (max-width: 368px) {
+    font-size: 2em;
+  }
 `;

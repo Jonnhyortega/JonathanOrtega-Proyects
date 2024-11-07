@@ -25,7 +25,6 @@ export const Card = ({
   cardGitHub,
   cardLanguages,
 }) => {
-  const location = useLocation();
   const { t } = useTranslation();
 
   const redirectVercel = () => {
@@ -36,12 +35,7 @@ export const Card = ({
   };
 
   return (
-    <CardWrapper
-      style={{
-        border: location.pathname === "/" ? "1px solid var(--violetFull5)" : "none"
-      }}
-      key={cardId}
-    >
+    <CardWrapper key={cardId}>
       <CardImage src={cardImage} alt={t(`projects.${cardTitle}.name`)} />
       <CardContent>
         <CardTitle>{t(cardTitle)}</CardTitle>

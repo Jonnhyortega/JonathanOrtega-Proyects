@@ -1,10 +1,21 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+export const NavButtons = styled.div`
+  width: 220px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--violetFull5);
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  padding: 1em 0;
+`;
 
 export const NavbarWrapper = styled.nav`
   padding: 2rem;
   height: 100vh;
-  width: 350px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -19,28 +30,26 @@ export const NavbarWrapper = styled.nav`
   transform: ${({ isOpen }) =>
     isOpen ? "translate(-100%, -0%)" : "translate(10%, 150%)"};
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  background: rgb(74, 35, 90);
-  background: linear-gradient(
-    to bottom,
-    rgba(74, 35, 90, 1) 0%,
-    rgba(108, 52, 131, 1) 38%,
-    rgba(142, 68, 173, 1) 80%
-  );
+  background: transparent;
+
+  p {
+    color: white;
+    font-weight: 300;
+  }
 `;
 
-export const HamburgerIcon = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 0;
+export const HamburgerIcon = styled.button`
   z-index: 100;
-  font-size: 1.3em;
-  font-weight: 300;
+  width: 80px;
+  font-weight: 600;
+  padding: 0.5em;
   cursor: pointer;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 2px;
   color: var(--greenStyle);
-  transition: 0.2s;
-  padding: .1em .5em;
-  border-top-left-radius: 5px;
-  background: var(--violetFull1);
   &:hover {
     background: var(--violetFull5);
   }
@@ -62,7 +71,7 @@ export const MenuOverlay = styled.div`
 export const NavLink = styled(Link)`
   color: var(--silverFull5);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-family: "Kanit", sans-serif;
 

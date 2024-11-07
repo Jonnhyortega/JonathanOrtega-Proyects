@@ -6,7 +6,7 @@ import {
   StyledLink,
   SkillsContainer,
   SkillsList,
-  Text
+  Text,
 } from "./HomeContentStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,12 +18,14 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Button } from "../Button3D/Button.jsx";
 
 export const HomeContent = () => {
   const { t } = useTranslation();
 
   return (
     <HomeContainer>
+      {/* <Button /> */}
       <Subtitle>{t("Bienvenido al")}</Subtitle>
       <Title>{t("Portafolios")}</Title>
       <Text>{t("Desarrollador de aplicaciones web")}</Text>

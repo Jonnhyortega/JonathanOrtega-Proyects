@@ -17,16 +17,14 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  min-height: 100vh;
   animation: ${fadeIn} 0.8s ease forwards;
-
   div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     animation: ${fadeIn} 1.2s ease forwards;
+    margin-bottom: 3em;
   }
 `;
 
@@ -79,9 +77,8 @@ export const SkillsContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
   width: 100%;
-  height: 100%;
+  padding: 0 0 5rem 0;
   background: linear-gradient(
     to bottom,
     rgba(74, 35, 90, 1) 0%,
@@ -92,7 +89,8 @@ export const SkillsContainer = styled.div`
 
   h3 {
     color: var(--greenStyle);
-    font-weight: 300;
+    font-weight: 200;
+    letter-spacing: 2px;
     animation: ${fadeIn} 1.2s ease forwards;
   }
 `;
@@ -112,12 +110,12 @@ export const SkillsList = styled.ul`
   li {
     background-color: transparent;
     color: var(--violetFull5);
-    font-size: 5em;
+    font-size: 3.5em;
     padding: 8px 12px;
     border-radius: 20px;
     transition: transform 0.3s ease, color 0.3s ease;
     animation: ${fadeIn} 1.4s ease forwards;
-    filter: drop-shadow(-1px 1px 20px grey);
+    // filter: drop-shadow(-1px 1px 20px grey);
     &:hover {
       transform: scale(1.2);
     }
@@ -129,7 +127,7 @@ export const SkillsList = styled.ul`
       color: rgb(0, 106, 255);
     }
     &:nth-child(3) {
-      color: rgb(255, 153, 0);
+      color: rgb(255, 93, 0);
     }
     &:nth-child(4) {
       color: rgb(0, 255, 229);

@@ -1,4 +1,6 @@
 {
+  "Menu":"Menü",
+  "¿Que le interesaría ver?":"Was würden Sie gerne sehen?",
   "Inicio":"Start",
   "Proyectos":"Projekte",
   "Español":"Spanisch",
@@ -6,7 +8,7 @@
   "Brasil":"Brasilien",
   "Alemania":"Deutschland",
   "China":"China",
-  "Elegir idioma": "Sprache",
+  "Idioma": "Sprache",
   "Portafolios": "Jonnys Brieftasche",
   "Bienvenido al": "Willkommen im",
   "Desarrollador de aplicaciones web":"Webanwendungsentwickler",
