@@ -45,14 +45,13 @@ export const CardWrapper = styled.div`
   animation: ${scaleUp} 0.8s ease forwards, ${fadeIn} 1s ease forwards;
   margin: 0;
   border: 1px solid var(--violetFull5);
+  border-radius: 5px;
 
-  border-radius: 4px;
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  &:hover{
+  box-shadow: 1px -1px 7px var(--violetFull5);
   }
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     border-radius: 0;
     flex-direction: column;
     align-items: center;
@@ -97,6 +96,8 @@ export const CardContent = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     text-align: center;
+    padding: 5px;
+
   }
 `;
 
@@ -118,7 +119,7 @@ export const CardTitle = styled.h3`
   }
 
   @media (max-width: 480px) {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -128,6 +129,10 @@ export const CardText = styled.p`
   font-weight: 500;
   line-height: 1;
   animation: ${fadeIn} 0.8s 0.8s ease forwards;
+
+  @media (max-width: 480px) {
+    font-size: .9rem;
+  }
 `;
 
 export const CardLanguages = styled.div`

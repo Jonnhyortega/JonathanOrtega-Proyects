@@ -6,8 +6,6 @@ import de from "../../imgs/Banderas/deutsch.png";
 import china from "../../imgs/Banderas/china.png";
 import eeuu from "../../imgs/Banderas/eeuu.png";
 import br from "../../imgs/Banderas/br.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { MenuOverlay } from "../Navbar/NavbarStyles";
 import { useLanguage } from "../../context/LanguageContext";
 import Button from "../Button3D/Button";
@@ -29,10 +27,6 @@ const LanguageSelector = () => {
   return (
     <>
       <Button text={"Idioma"} onClick={toggleMenu} />
-      {/* <button className="toggle-button" onClick={toggleMenu}>
-        <FontAwesomeIcon className="iconLanguage" icon={faGlobe} />
-        {t("Elegir idioma")}
-      </button> */}
       <ul id="LANGUAGE_ONBOARD" className={`example-2 ${isOpen ? "open" : ""}`}>
         <li className="icon-content">
           <a

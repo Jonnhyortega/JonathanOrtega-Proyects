@@ -25,7 +25,6 @@ export const HomeContent = () => {
 
   return (
     <HomeContainer>
-      {/* <Button /> */}
       <Subtitle>{t("Bienvenido al")}</Subtitle>
       <Title>{t("Portafolios")}</Title>
       <Text>{t("Desarrollador de aplicaciones web")}</Text>

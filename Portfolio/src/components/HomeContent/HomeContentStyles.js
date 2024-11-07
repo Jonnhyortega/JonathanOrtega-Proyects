@@ -15,9 +15,10 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   animation: ${fadeIn} 0.8s ease forwards;
+  min-height: 100vh;
   div {
     display: flex;
     flex-wrap: wrap;

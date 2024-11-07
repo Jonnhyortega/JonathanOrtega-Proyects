@@ -1,12 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { iconMap } from "../../utils/data";
 import { projects } from "../../utils/data";
-
 import { Card } from "../CardProject/Card";
 import { ContainerProjects, Title } from "./ProjectContentStyles";
 import { useTranslation } from "react-i18next";
+
 export const ProjectContent = () => {
   const { t } = useTranslation;
   return (

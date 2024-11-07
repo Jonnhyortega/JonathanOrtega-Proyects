@@ -3,6 +3,7 @@ import CHULOS_IMG from "../imgs/ProjectsImgs/ChulosDesign/Logo.png";
 import WORK_LIST from "../imgs/ProjectsImgs/WorkList/workList.jpeg";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
+import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg"
 import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact } from "react-icons/fa";
 
 export const iconMap = {
@@ -46,6 +47,16 @@ export const projects = [
   },
   {
     id: 4,
+    name: "Portfolios",
+    img: Portfolio,
+    gitHub: "https://github.com/Jonnhyortega/JonathanOrtega-Proyects",
+    link: "https:/www.jonnhyortegadev.com/",
+    description:
+      "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.",
+    language: ["html5", "css3-alt", "js", "react"],
+  },
+  {
+    id: 5,
     name: "Goa academia de artes marciales",
     img: GOA,
     gitHub: "https://github.com/Jonnhyortega/Landing",
@@ -56,7 +67,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Lista de tareas",
     img: WORK_LIST,
     gitHub: "https://github.com/Jonnhyortega/lista-de-tareas",

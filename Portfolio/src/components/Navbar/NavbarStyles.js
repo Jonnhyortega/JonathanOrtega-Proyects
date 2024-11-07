@@ -38,23 +38,6 @@ export const NavbarWrapper = styled.nav`
   }
 `;
 
-export const HamburgerIcon = styled.button`
-  z-index: 100;
-  width: 80px;
-  font-weight: 600;
-  padding: 0.5em;
-  cursor: pointer;
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  border-radius: 2px;
-  color: var(--greenStyle);
-  &:hover {
-    background: var(--violetFull5);
-  }
-`;
-
 export const MenuOverlay = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   position: fixed;
