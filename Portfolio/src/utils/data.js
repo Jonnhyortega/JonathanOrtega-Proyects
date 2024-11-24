@@ -1,4 +1,5 @@
 import ASTROFY from "../imgs/ProjectsImgs/Astrofy/astrofy.png";
+import SANITARIOSLUGANO from "../imgs/ProjectsImgs/Sanitarios/SanitariosLugano.jpeg";
 import CHULOS_IMG from "../imgs/ProjectsImgs/ChulosDesign/Logo.png";
 import WORK_LIST from "../imgs/ProjectsImgs/WorkList/workList.jpeg";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
@@ -27,6 +28,16 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Sanitarios Lugano",
+    img: SANITARIOSLUGANO,
+    gitHub: "https://github.com/Jonnhyortega/sanitarioslugano",
+    link: "https://sanitarioslugano.com/",
+    description:
+      "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.",
+    language: ["html5", "css3-alt", "js", "react"],
+  },
+  {
+    id: 3,
     name: "Astral Vision",
     img: AstralVision,
     gitHub: "https://github.com/Jonnhyortega/astralvision",
@@ -36,7 +47,7 @@ export const projects = [
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Astrofy",
     img: ASTROFY,
     gitHub: "https://github.com/Jonnhyortega/Astrofy",
@@ -46,7 +57,7 @@ export const projects = [
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Portafolios personal",
     img: Portfolio,
     gitHub: "https://github.com/Jonnhyortega/JonathanOrtega-Proyects",
@@ -56,7 +67,7 @@ export const projects = [
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Goa academia de artes marciales",
     img: GOA,
     gitHub: "https://github.com/Jonnhyortega/Landing",
@@ -67,7 +78,7 @@ export const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     name: "Lista de tareas",
     img: WORK_LIST,
     gitHub: "https://github.com/Jonnhyortega/lista-de-tareas",

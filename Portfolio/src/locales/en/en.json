@@ -40,5 +40,8 @@
   "Landing Chulos": "Landing Chulos",
   "Astrofy": "Astrofy",
   "Goa academia de artes marciales": "Goa martial arts academy",
-  "Lista de tareas": "To-do list"
+  "Lista de tareas": "To-do list",
+  "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Website for an interior design brand. Implementation of React Router Dom and EmailJs library to handle contact form.",
+  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutional website for the sale of sanitary and construction products.",
+  "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.":"React Router dom implementation, i18n library for language translation (used with React-Context), styled components."
 }

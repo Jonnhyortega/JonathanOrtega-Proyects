@@ -30,5 +30,6 @@
   "downloadResume": "Descargar CV",
   "certifications": "Certificaciones",
   "oracleProgram": "Programa educativo de Oracle y Alura Latam",
-  "clickToViewCertificates": "Click en los botones para ver los certificados"
+  "clickToViewCertificates": "Click en los botones para ver los certificados",
+  "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.":"Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario."
 }

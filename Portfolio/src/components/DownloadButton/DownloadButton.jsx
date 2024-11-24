@@ -1,8 +1,7 @@
-import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
-import cves from "./CVes.pdf";
-import cven from "./CvEn.pdf";
+import cves from "./CV_ES.pdf";
+import cven from "./CV_EN.pdf";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../context/LanguageContext";
