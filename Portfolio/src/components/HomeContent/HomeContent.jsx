@@ -17,6 +17,8 @@ import {
   faNode,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { SiTypescript } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 import { useTranslation } from "react-i18next";
 import { Button } from "../Button3D/Button.jsx";
 
@@ -53,6 +55,14 @@ export const HomeContent = () => {
           </li>
           <li>
             <FontAwesomeIcon icon={faGithub} />
+          </li>
+          <li>
+            {" "}
+            <SiTypescript size={50} color="blue" />
+          </li>
+          <li>
+            {" "}
+            <DiMongodb size={50} color="green" />
           </li>
         </SkillsList>
       </SkillsContainer>

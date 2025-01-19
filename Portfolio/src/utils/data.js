@@ -1,11 +1,20 @@
-import ASTROFY from "../imgs/ProjectsImgs/Astrofy/astrofy.png";
+import ASTROFY from "../imgs/ProjectsImgs/Astrofy/logoAstral.png";
 import SANITARIOSLUGANO from "../imgs/ProjectsImgs/Sanitarios/SanitariosLugano.jpeg";
 import CHULOS_IMG from "../imgs/ProjectsImgs/ChulosDesign/Logo.png";
 import WORK_LIST from "../imgs/ProjectsImgs/WorkList/workList.jpeg";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
 import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg";
-import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap, FaReact } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaBootstrap,
+  FaReact,
+  FaNode,
+} from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 
 export const iconMap = {
   html5: FaHtml5,
@@ -13,18 +22,29 @@ export const iconMap = {
   js: FaJs,
   bootstrap: FaBootstrap,
   react: FaReact,
+  node: FaNode,
+  typescript: SiTypescript,
+  mongo: DiMongodb,
 };
 
 export const projects = [
   {
     id: 1,
-    name: "Landing Chulos",
-    img: CHULOS_IMG,
-    gitHub: "https://github.com/Jonnhyortega/landingchulos",
-    link: "https://chulosdesign.com/",
+    name: "Astrofy",
+    img: ASTROFY,
+    gitHub: "https://github.com/Jonnhyortega/Astrofy",
+    link: "https://astrofycl.vercel.app/",
     description:
-      "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
-    language: ["html5", "css3-alt", "js", "react"],
+      "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.",
+    language: [
+      "html5",
+      "css3-alt",
+      "js",
+      "react",
+      "typescript",
+      "node",
+      "mongo",
+    ],
   },
   {
     id: 2,
@@ -47,13 +67,13 @@ export const projects = [
     language: ["html5", "css3-alt", "js", "react"],
   },
   {
-    id: 4,
-    name: "Astrofy",
-    img: ASTROFY,
-    gitHub: "https://github.com/Jonnhyortega/Astrofy",
-    link: "https://astrofycl.vercel.app/",
+    id: 1,
+    name: "Landing Chulos",
+    img: CHULOS_IMG,
+    gitHub: "https://github.com/Jonnhyortega/landingchulos",
+    link: "https://chulosdesign.com/",
     description:
-      "Proyecto con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y axios fetch.",
+      "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
     language: ["html5", "css3-alt", "js", "react"],
   },
   {

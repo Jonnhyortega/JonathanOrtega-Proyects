@@ -44,5 +44,6 @@
   "Astrofy": "Astrofy",
   "Goa academia de artes marciales": "Goa 武术学院",
   "Lista de tareas": "待办事项列表",
-  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.":"机构网站，用于销售卫生和建筑产品."
+  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.":"机构网站，用于销售卫生和建筑产品.",
+  "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.":"Proyecto 全栈与罚款学者。 React Router dom、Redux Toolkit、样式组件和库 axios 的实现。后端使用mongoDb、node Js和express库。"
 }

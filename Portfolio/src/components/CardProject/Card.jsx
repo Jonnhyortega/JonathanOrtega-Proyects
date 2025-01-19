@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   CardWrapper,
@@ -43,7 +43,8 @@ export const Card = ({
         <ButtonsDiv>
           {cardTitle !== "Portafolios personal" ? (
             <CardButton onClick={redirectVercel}>
-              <FontAwesomeIcon icon={faLink} />
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            
             </CardButton>
           ) : null}
           <CardButton onClick={redirectGitHub}>

@@ -44,5 +44,6 @@
   "Astrofy": "Astrofy",
   "Goa academia de artes marciales": "Goa Kampfsportschule",
   "Lista de tareas": "Aufgabenliste",
-  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutionelle Website für den Handel mit Sanitär- und Bauprodukten."
+  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutionelle Website für den Handel mit Sanitär- und Bauprodukten.",
+  "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Full-Stack-Projekt für akademische Zwecke. Implementierung von React Router Dom, Redux Toolkit, gestalteten Komponenten und Axios-Bibliothek. Für das Backend wurden MongoDb, Node Js und die Express-Bibliothek verwendet."
 }
