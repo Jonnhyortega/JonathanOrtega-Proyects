@@ -33,7 +33,7 @@ export const projects = [
     name: "Astrofy",
     img: ASTROFY,
     gitHub: "https://github.com/Jonnhyortega/Astrofy",
-    link: "https://astrofycl.vercel.app/",
+    link: "https://astrofy-ashy.vercel.app/",
     description:
       "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.",
     language: [
