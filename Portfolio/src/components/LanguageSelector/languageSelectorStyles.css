@@ -1,15 +1,32 @@
+#language-onboard-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-language-onboard {
+  background-color: red;
+  position: absolute;
+  top: 10px;
+}
 #LANGUAGE_ONBOARD {
   list-style: none;
-  margin: 1rem;
-  position: fixed;
-  top: 120px;
-  right: -250px;
-  z-index: 1300;
   background-color: transparent;
-  padding: 1em;
   height: auto;
   width: auto;
   transition: right 0.6s ease;
+}
+
+@media (max-width: 668px) {
+  #LANGUAGE_ONBOARD {
+    width: 300px;
+    flex-direction: row;
+  }
 }
 
 #LANGUAGE_ONBOARD.open {
@@ -19,7 +36,7 @@
   width: 108px;
   background-color: transparent;
 }
-/* From Uiverse.io by devanshsatwara */
+
 .ui-btn {
   --btn-default-bg: #010314;
   --btn-padding: 15px 20px;
@@ -66,15 +83,12 @@
 
 .example-2 {
   display: flex;
-  flex-direction: column;
-  z-index: 2000;
+  flex-wrap: wrap;
 }
 
 .example-2 .icon-content {
-  margin: 10px 0;
   position: relative;
   cursor: pointer;
-  width: 90px;
 }
 
 .example-2 .icon-content .tooltip {

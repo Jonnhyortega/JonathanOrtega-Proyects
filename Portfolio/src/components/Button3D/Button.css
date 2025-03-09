@@ -9,7 +9,7 @@
   justify-content: center;
   color: var(--default-btn-color);
   font: 0.8em;
-  font-family: "Kanit", sans-serif;
+  font-family: var(--inter);
   font-weight: 200;
   background: transparent;
   cursor: pointer;
@@ -18,6 +18,9 @@
   box-shadow: var(--btn-shadow);
   border-radius: 10px;
   border: 2px solid var(--violetFull1);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .ui-btn > span {

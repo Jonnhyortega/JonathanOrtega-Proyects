@@ -10,16 +10,7 @@ export const ProjectContent = () => {
     <ContainerProjects>
       <Title>Proyectos</Title>
       {projects.map((project) => (
-        <Card
-          key={project.id}
-          cardLink={project.link}
-          cardGitHub={project.gitHub}
-          cardId={project.id}
-          cardImage={project.img}
-          cardTitle={project.name}
-          cardDescription={project.description}
-          cardLanguages={project.language}
-        />
+        <Card key={project.id} data={project} />
       ))}
     </ContainerProjects>
   );

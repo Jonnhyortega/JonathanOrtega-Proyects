@@ -6,28 +6,19 @@ import de from "../../imgs/Banderas/deutsch.png";
 import china from "../../imgs/Banderas/china.png";
 import eeuu from "../../imgs/Banderas/eeuu.png";
 import br from "../../imgs/Banderas/br.png";
-import { MenuOverlay } from "../Navbar/NavbarStyles";
 import { useLanguage } from "../../context/LanguageContext";
-import Button from "../Button3D/Button";
 
 const LanguageSelector = () => {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
   const { changeLanguage, currentLanguage } = useLanguage();
 
   const handleLanguageChange = (lang) => {
     changeLanguage(lang);
-    toggleMenu();
-  };
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <Button text={"Idioma"} onClick={toggleMenu} />
-      <ul id="LANGUAGE_ONBOARD" className={`example-2 ${isOpen ? "open" : ""}`}>
+      <ul id="LANGUAGE_ONBOARD" className="example-2">
         <li className="icon-content">
           <a
             aria-label="Argentina"
@@ -90,7 +81,6 @@ const LanguageSelector = () => {
           <div className="tooltip">Alemania</div>
         </li>
       </ul>
-      <MenuOverlay isOpen={isOpen} onClick={toggleMenu} />
     </>
   );
 };

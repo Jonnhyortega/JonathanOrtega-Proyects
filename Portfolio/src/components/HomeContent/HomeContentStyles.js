@@ -107,7 +107,7 @@ export const SkillsList = styled.ul`
   gap: 15px;
   font-size: 1rem;
   color: #444;
-
+  max-width: 500px;
   li {
     background-color: transparent;
     color: var(--violetFull5);
@@ -116,11 +116,11 @@ export const SkillsList = styled.ul`
     border-radius: 20px;
     transition: transform 0.3s ease, color 0.3s ease;
     animation: ${fadeIn} 1.4s ease forwards;
-    // filter: drop-shadow(-1px 1px 20px grey);
-    &:hover {
-      transform: scale(1.2);
-    }
+    filter: drop-shadow(1px 1px 5px black);
+    &:hover{
+      filter: drop-shadow(1px 1px 7px black);
 
+    }
     &:nth-child(1) {
       color: yellow;
     }
@@ -138,6 +138,10 @@ export const SkillsList = styled.ul`
     }
     &:nth-child(6) {
       color: black;
+    }
+
+    &:nth-child(9) {
+      color: #3f3ffd;
     }
   }
 `;

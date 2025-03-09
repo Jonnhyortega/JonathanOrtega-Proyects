@@ -2,10 +2,10 @@
 import Layout from "./components/Layout/Layout";
 import AppRoutes from "./Routes/AppRoutes";
 import Navbar from "./components/Navbar/Navbar";
-import LanguageSelector from "./components/LanguageSelector/LanguageSelector";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import LanguageProvider from "./context/LanguageContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const { i18n } = useTranslation();
@@ -15,11 +15,8 @@ function App() {
     <Layout>
       <LanguageProvider>
         <Navbar />
-        {/* <LanguageSelector
-          currentLanguage={currentLanguage}
-          setCurrentLanguage={setCurrentLanguage}
-        /> */}
         <AppRoutes />
+        <Footer />
       </LanguageProvider>
     </Layout>
   );
