@@ -1,40 +1,23 @@
-#language-onboard-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: gold;
+#LANGUAGE_ONBOARD {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-#title-language-onboard {
-  background-color: red;
-  position: absolute;
-  top: 10px;
-}
-#LANGUAGE_ONBOARD {
+  flex-wrap: wrap;
   list-style: none;
   background-color: transparent;
-  height: auto;
-  width: auto;
   transition: right 0.6s ease;
-}
-
-@media (max-width: 668px) {
-  #LANGUAGE_ONBOARD {
-    width: 300px;
-    flex-direction: row;
+  position: relative;
+  
+  h2 {
+    color: white;
+    position: absolute;
+    top: -50px;
+    left: 47%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: var(--inter);
+    color: white;
   }
-}
-
-#LANGUAGE_ONBOARD.open {
-  right: -40px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 108px;
-  background-color: transparent;
 }
 
 .ui-btn {
@@ -49,7 +32,6 @@
   --hover-btn-color: #7241ff;
   --default-btn-color: #fff;
   --font-size: 16px;
-  /* 👆 this field should not be empty */
   --font-weight: 600;
   --font-family: Menlo, Roboto Mono, monospace;
 }
@@ -77,21 +59,16 @@
 
 .toggle-button > p {
   font-size: 0.5em;
-  margin-top: 2px;
   text-align: center;
 }
 
-.example-2 {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.example-2 .icon-content {
+ .icon-content {
   position: relative;
   cursor: pointer;
 }
 
-.example-2 .icon-content .tooltip {
+.icon-content .tooltip {
   position: absolute;
   top: -30px;
   left: 50%;
@@ -105,7 +82,7 @@
   transition: all 0.3s ease;
 }
 
-.example-2 .icon-content a {
+.icon-content a {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -119,11 +96,11 @@
   color: white;
 }
 
-.example-2 .icon-content a:hover {
+.icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
 }
 
-.example-2 .icon-content a img {
+.icon-content a img {
   position: relative;
   z-index: 1;
   width: 30px;
@@ -132,7 +109,7 @@
   border-radius: 50%;
 }
 
-.example-2 .icon-content a .filled {
+ .icon-content a .filled {
   position: absolute;
   top: auto;
   bottom: 0;
@@ -143,12 +120,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.example-2 .icon-content a:hover .filled {
+.icon-content a:hover .filled {
   height: 100%;
 }
 
-.example-2 .icon-content a[data-social="Argentina"] .filled,
-.example-2 .icon-content a[data-social="Argentina"] ~ .tooltip {
+ .icon-content a[data-social="Argentina"] .filled,
+.icon-content a[data-social="Argentina"] ~ .tooltip {
   background: linear-gradient(
     to bottom,
     #74acdf 33.33%,
@@ -157,8 +134,8 @@
   );
 }
 
-.example-2 .icon-content a[data-social="EEUU"] .filled,
-.example-2 .icon-content a[data-social="EEUU"] ~ .tooltip {
+.icon-content a[data-social="EEUU"] .filled,
+.icon-content a[data-social="EEUU"] ~ .tooltip {
   background: repeating-linear-gradient(
     to bottom,
     #b22234,
@@ -168,8 +145,8 @@
   );
 }
 
-.example-2 .icon-content a[data-social="Brasil"] .filled,
-.example-2 .icon-content a[data-social="Brasil"] ~ .tooltip {
+.icon-content a[data-social="Brasil"] .filled,
+.icon-content a[data-social="Brasil"] ~ .tooltip {
   background: radial-gradient(
     circle at center,
     #002776 20%,
@@ -178,12 +155,12 @@
   );
 }
 
-.example-2 .icon-content a[data-social="China"] .filled,
-.example-2 .icon-content a[data-social="China"] ~ .tooltip {
+ .icon-content a[data-social="China"] .filled,
+ .icon-content a[data-social="China"] ~ .tooltip {
   background: linear-gradient(to right, #ff0000 80%, #de2910 80%, #ffde00 20%);
 }
 
-.example-2 .icon-content a[data-social="Alemania"] .filled,
-.example-2 .icon-content a[data-social="Alemania"] ~ .tooltip {
+ .icon-content a[data-social="Alemania"] .filled,
+ .icon-content a[data-social="Alemania"] ~ .tooltip {
   background: linear-gradient(to top, black 33.33%, red 53.33%, yellow 66.66%);
 }

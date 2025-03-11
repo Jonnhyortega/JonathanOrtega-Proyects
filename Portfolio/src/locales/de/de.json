@@ -33,17 +33,18 @@
   "certifications": "Zertifizierungen",
   "oracleProgram": "Bildungsprogramm von Oracle und Alura Latam",
   "clickToViewCertificates": "Klicken Sie auf die Schaltflächen, um die Zertifikate zu sehen",
-  "Sitio web con fines academicos. Implementacion de React Router Dom y styled components.": "Website für akademische Zwecke. Implementierung von React Router Dom und Styled Components.",
+  "Implementacion de React Router Dom y styled components.": "Website für akademische Zwecke. Implementierung von React Router Dom und Styled Components.",
   "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Website für eine Innenarchitekturmarke. Implementierung von React Router Dom und der EmailJs-Bibliothek zur Handhabung des Kontaktformulars. Demnächst.",
-  "Proyecto con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y axios fetch.": "Akademisches Projekt. Implementierung von React Router Dom, Redux Toolkit, styled components und axios fetch.",
+  "Implementacion de React Router dom, Redux Toolkit, styled components y axios fetch.": "Akademisches Projekt. Implementierung von React Router Dom, Redux Toolkit, styled components und axios fetch.",
   "Aplicacion con fines académicos.": "Anwendung zu akademischen Zwecken.",
   "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.": "Implementierung von React Router Dom, i18n-Bibliothek zur Sprachübersetzung (verwendet mit React-Context), Styled Components.",
-  "Sitio web con fines academicos. Implementacion de React Router Dom.": "Website für akademische Zwecke. Implementierung von React Router Dom.",
+  "Implementacion de React Router Dom.": "Website für akademische Zwecke. Implementierung von React Router Dom.",
   "Astral Vision": "Astral Vision",
   "Landing Chulos": "Landing Chulos",
   "Astrofy": "Astrofy",
-  "Goa academia de artes marciales": "Goa Kampfsportschule",
+  "Goa academia de artes": "Goa Kampfsportschule",
   "Lista de tareas": "Aufgabenliste",
   "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutionelle Website für den Handel mit Sanitär- und Bauprodukten.",
-  "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Full-Stack-Projekt für akademische Zwecke. Implementierung von React Router Dom, Redux Toolkit, gestalteten Komponenten und Axios-Bibliothek. Für das Backend wurden MongoDb, Node Js und die Express-Bibliothek verwendet."
+  "Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Full-Stack-Projekt für akademische Zwecke. Implementierung von React Router Dom, Redux Toolkit, gestalteten Komponenten und Axios-Bibliothek. Für das Backend wurden MongoDb, Node Js und die Express-Bibliothek verwendet.",
+  "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.": "Refaktorisierung des Front-End-Codes einer Anwendung für künstliche Intelligenz zur Automatisierung von Videos, die in Django entwickelt wurde."
 }

@@ -42,8 +42,9 @@
   "Astral Vision": "星际视野",
   "Landing Chulos": "Landing Chulos",
   "Astrofy": "Astrofy",
-  "Goa academia de artes marciales": "Goa 武术学院",
+  "Goa academia de artes": "Goa 武术学院",
   "Lista de tareas": "待办事项列表",
   "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "机构网站，用于销售卫生和建筑产品.",
-  "Proyecto full stack con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Proyecto 全栈与罚款学者。 React Router dom、Redux Toolkit、样式组件和库 axios 的实现。后端使用mongoDb、node Js和express库。"
+  "Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Proyecto 全栈与罚款学者。 React Router dom、Redux Toolkit、样式组件和库 axios 的实现。后端使用mongoDb、node Js和express库。",
+  "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.": "Django 开发的用于视频自动化的人工智能应用程序的前端代码重构"
 }

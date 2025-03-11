@@ -13,9 +13,9 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import profilePhoto from "../../imgs/img-perfil.jpg";
-import certifDW from "../../imgs/diseñoWeb.jpg";
-import certifJs from "../../imgs/javascript.jpg";
-import certifReact from "../../imgs/react.jpg";
+import certifDW from "../../imgs/diseñoWeb.webp";
+import certifJs from "../../imgs/javascript.webp";
+import certifReact from "../../imgs/react.webp";
 import DownloadCVButton from "../DownloadButton/DownloadButton";
 export const ContactContent = () => {
   const [showNotification, setShowNotification] = useState(false);

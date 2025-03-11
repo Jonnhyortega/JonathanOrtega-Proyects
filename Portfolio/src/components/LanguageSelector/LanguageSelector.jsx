@@ -19,6 +19,7 @@ const LanguageSelector = () => {
   return (
     <>
       <ul id="LANGUAGE_ONBOARD" className="example-2">
+        <h2>{t("Idioma")}</h2>
         <li className="icon-content">
           <a
             aria-label="Argentina"

@@ -36,7 +36,7 @@ export const Title = styled.h1`
   margin-bottom: 0;
   animation: ${fadeIn} 0.6s ease forwards;
   transition: color 0.3s ease;
-
+  padding: 1rem;
   &:hover {
     color: var(--greenStyle);
   }
@@ -48,12 +48,14 @@ export const Subtitle = styled.h2`
   font-weight: 200;
   color: var(--greenStyle);
   animation: ${fadeIn} 0.8s ease forwards;
+  padding: 1rem;
 `;
 export const Text = styled.h2`
   font-size: 1.5rem;
   font-weight: 200;
   color: var(--greenStyle);
   animation: ${fadeIn} 0.8s ease forwards;
+  padding: 1rem;
 `;
 
 export const StyledLink = styled(Link)`
@@ -117,9 +119,8 @@ export const SkillsList = styled.ul`
     transition: transform 0.3s ease, color 0.3s ease;
     animation: ${fadeIn} 1.4s ease forwards;
     filter: drop-shadow(1px 1px 5px black);
-    &:hover{
+    &:hover {
       filter: drop-shadow(1px 1px 7px black);
-
     }
     &:nth-child(1) {
       color: yellow;

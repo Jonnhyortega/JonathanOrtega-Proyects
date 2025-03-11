@@ -13,7 +13,6 @@ import {
   IconContainer,
 } from "./ContactComponentStyles";
 import profilePhoto from "../../../imgs/img-perfil.jpg";
-import DownloadCVButton from "../../DownloadButton/DownloadButton";
 import { useTranslation } from "react-i18next";
 
 export const ContactComponent = () => {
@@ -46,7 +45,6 @@ export const ContactComponent = () => {
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
       </IconContainer>
-      <DownloadCVButton />
     </ContactSection>
   );
 };

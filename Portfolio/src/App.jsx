@@ -1,4 +1,4 @@
-// src/App.js
+import importReact from "react";
 import Layout from "./components/Layout/Layout";
 import AppRoutes from "./Routes/AppRoutes";
 import Navbar from "./components/Navbar/Navbar";

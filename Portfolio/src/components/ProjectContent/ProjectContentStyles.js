@@ -14,14 +14,22 @@ const fadeIn = keyframes`
 export const ContainerProjects = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
   color: #ffffff;
   animation: ${fadeIn} 1s ease-in-out;
   width: 100%;
   background: transparent;
-  padding: 50px 0;
+
+  .container-projects {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -29,8 +37,8 @@ export const Title = styled.h2`
   color: var(--violetFull5);
   border-bottom: 2px solid;
   font-size: 3.5em;
-  text-align: justify;
-
+  width: fit-content;
+  margin: 0 auto;
   animation: ${fadeIn} 1s ease-in-out;
 
   @media (max-width: 568px) {

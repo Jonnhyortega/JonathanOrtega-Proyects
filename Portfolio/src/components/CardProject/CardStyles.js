@@ -1,81 +1,105 @@
 import styled from "styled-components";
 
-export const CardWrapper = styled.div`
-  display: flex;
-  width: 90%;
-  padding: 20px;
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  background-color: rgba(4, 4, 4, 0.63);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  margin: 0;
-  border: 1px solid var(--violetFull5);
-  border-radius: 5px;
-
-  @media (max-width: 768px) {
-    border-radius: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  div > div {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-  }
-`;
-
-export const CardImage = styled.img`
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  border: 2px solid var(--color5);
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    border-radius: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  @media (max-width: 568px) {
-    width: 250px;
-  }
-`;
-
 export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 45px;
-  padding: 20px;
-  width: 50%;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 350px;
+  border-radius: 2px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid var(--violetFull5);
+  position: relative;
+  background-image: url(${(props) => props.$backgroundimage});
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 0;
+
+  }
+  /* 
+  * {
+    border: 1px solid yellow;
+  } */
+
   @media (max-width: 768px) {
     width: 100%;
+    min-width: none;
+    min-height: none;
     text-align: center;
     padding: 5px;
   }
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+
+  &:hover .description-and-links {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .title-and-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 1;
+  }
+
+  .description-and-links {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgb(91, 44, 211, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    border-radius: 4px;
+    font-family: var(--inter);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    z-index: 2;
+  }
 `;
 
-export const CardTitle = styled.h3`
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--greenStyle);
+export const CardTitle = styled.div`
+  font-size: 1rem;
+  width: 90%;
+
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--violetFull5);
   transition: color 0.3s ease, transform 0.2s ease;
+  filter: drop-shadow(1px 1px 3px grey);
 
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--greenStyle);
+    letter-spacing: 1.2px;
+  }
   @media (max-width: 768px) {
     font-size: 1.8rem;
     text-align: center;
@@ -86,11 +110,12 @@ export const CardTitle = styled.h3`
   }
 `;
 
-export const CardText = styled.p`
+export const CardText = styled.div`
   font-size: 1.1rem;
   color: var(--silverFull5);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1;
+  padding: 20px;
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
@@ -99,10 +124,14 @@ export const CardText = styled.p`
 
 export const CardLanguages = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   font-size: 2em;
   border-radius: 5px;
   margin-left: 1rem;
+  img {
+    filter: drop-shadow(1px 1px 5px rgb(72, 72, 72));
+  }
 `;
 
 export const ButtonsDiv = styled.div`
@@ -111,44 +140,16 @@ export const ButtonsDiv = styled.div`
   align-items: center;
   gap: 10px;
   justify-content: space-around;
-`;
 
-export const CardButton = styled.button`
-  align-self: center;
-  z-index: 1;
-  position: relative;
-  color: grey;
-  font-size: 1.9em;
-  border: none;
-  border-radius: 5px;
-  padding: 0.1em 0.2em;
-  overflow: hidden;
-  transition: color 0.8s ease-in-out;
-  background: transparent;
-  width: 50px;
-  text-align: center;
-
-  &::before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    background-color: var(--greenStyle);
-    transform-origin: center;
-    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-    transition: transform 1s ease-in-out;
+  a {
+    color: var(--greenStyle);
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.8rem;
   }
 
-  &:hover {
-    cursor: pointer;
-    color: black;
-  }
-
-  &:hover::before {
-    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+  a:hover {
+    color: var(--violetFull5);
+    transform: scale(1.1);
   }
 `;

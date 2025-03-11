@@ -4,9 +4,9 @@ import {
   Overlay,
   OverlayImage,
 } from "./ContactContentStyles";
-
 import ContactComponent from "./ContactComponent/ContactComponent";
 import Certification from "./Certification/Certification";
+
 export const ContactContent = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [imageSrc, setImageSrc] = useState("");

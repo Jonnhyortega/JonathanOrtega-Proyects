@@ -7,10 +7,10 @@ import {
   ButtonStack,
   ButtonCertif,
 } from "./CertificationStyles";
-import certifDW from "../../../imgs/Certifications/CERTIF_DW.jpg";
-import certifJs from "../../../imgs/Certifications/CERTIF_JS.jpg";
-import certifReact from "../../../imgs/Certifications/REACT.jpg";
-import upcoming from "../../../imgs/Certifications/proximamente.jpeg";
+import certifDW from "../../../imgs/Certifications/CERTIF_DW.webp";
+import certifJs from "../../../imgs/Certifications/CERTIF_JS.webp";
+import certifReact from "../../../imgs/Certifications/REACT.webp";
+import fullStack from "../../../imgs/Certifications/fullStack.webp";
 import { useTranslation } from "react-i18next";
 
 export const Certification = ({ handleImageClick }) => {
@@ -42,8 +42,8 @@ export const Certification = ({ handleImageClick }) => {
           <ButtonCertif onClick={() => handleImageClick(certifReact)}>
             React
           </ButtonCertif>
-          <ButtonCertif onClick={() => handleImageClick(upcoming)}>
-            BackEnd
+          <ButtonCertif onClick={() => handleImageClick(fullStack)}>
+            Full Stack
           </ButtonCertif>
         </ButtonStack>
         <small>{t("Click en los botones para ver los certificados")}</small>
