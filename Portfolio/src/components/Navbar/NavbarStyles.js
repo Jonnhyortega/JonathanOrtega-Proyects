@@ -73,7 +73,7 @@ export const NavButtons = styled.div`
 export const NavbarWrapper = styled.nav`
   height: fit-content;
   width: 400px;
-  margin: 0 auto;
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,7 +92,8 @@ export const NavbarWrapper = styled.nav`
 export const MenuOverlay = styled.div`
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
+  gap: 2rem;
   align-items: center;
   position: fixed;
   top: 0;
@@ -134,7 +135,6 @@ export const NavLink = styled(Link)`
   }
 
   &::before {
-
     content: "";
     position: absolute;
     top: 0;

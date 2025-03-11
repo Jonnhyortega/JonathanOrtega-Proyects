@@ -75,7 +75,7 @@ export const Navbar = () => {
         ref={menuOverlayRef}
         id="menu-overlay"
         className="animate__animated"
-        onClick={toggleMenu}
+        
       >
         <NavbarWrapper>
           <NavLink to="/" onClick={(e) => handleNavLinkClick(e)}>
@@ -88,11 +88,7 @@ export const Navbar = () => {
             {t("Proyectos")}
           </NavLink>
         </NavbarWrapper>
-
-        <LanguageSelector
-          currentLanguage={currentLanguage}
-          setCurrentLanguage={setCurrentLanguage}
-        />
+        <LanguageSelector />
       </MenuOverlay>
     </NavButtons>
   );

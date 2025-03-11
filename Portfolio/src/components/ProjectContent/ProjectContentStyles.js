@@ -38,7 +38,7 @@ export const Title = styled.h2`
   border-bottom: 2px solid;
   font-size: 3.5em;
   width: fit-content;
-  margin: 0 auto;
+  margin: 50px auto 10px auto;
   animation: ${fadeIn} 1s ease-in-out;
 
   @media (max-width: 568px) {

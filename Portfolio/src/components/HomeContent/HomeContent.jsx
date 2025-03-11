@@ -37,7 +37,7 @@ export const HomeContent = () => {
       </div>
 
       <SkillsContainer>
-        <h3>{t("Tecnologias preferidas")}</h3>
+        <h3>{t("Tecnologias")}</h3>
         <SkillsList>
           <li>
             <FontAwesomeIcon icon={faJs} />

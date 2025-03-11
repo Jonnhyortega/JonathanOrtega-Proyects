@@ -1,88 +1,38 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "./languageSelectorStyles.css";
-import arg from "../../imgs/Banderas/arg.png";
-import de from "../../imgs/Banderas/deutsch.png";
-import china from "../../imgs/Banderas/china.png";
-import eeuu from "../../imgs/Banderas/eeuu.png";
-import br from "../../imgs/Banderas/br.png";
+import "./LanguageSelectorStyles.js"; // Asegúrate de que este archivo tenga un export
 import { useLanguage } from "../../context/LanguageContext";
+import { LanguageSelectorContainer } from "./LanguageSelectorStyles.js";
+import { MdLanguage } from "react-icons/md";
 
 const LanguageSelector = () => {
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage } = useLanguage();
 
-  const handleLanguageChange = (lang) => {
-    changeLanguage(lang);
+  const handleLanguageChange = (event) => {
+    changeLanguage(event.target.value);
   };
 
   return (
-    <>
-      <ul id="LANGUAGE_ONBOARD" className="example-2">
-        <h2>{t("Idioma")}</h2>
-        <li className="icon-content">
-          <a
-            aria-label="Argentina"
-            data-social="Argentina"
-            onClick={() => handleLanguageChange("es")}
-            disabled={currentLanguage === "es"}
-          >
-            <div className="filled"></div>
-            <img src={arg} alt="Bandera EE.UU" />
-          </a>
-          <div className="tooltip">Argentina</div>
-        </li>
-        <li className="icon-content">
-          <a
-            aria-label="EEUU"
-            data-social="EEUU"
-            onClick={() => handleLanguageChange("en")}
-            disabled={currentLanguage === "en"}
-          >
-            <div className="filled"></div>
-            <img src={eeuu} alt="Bandera EE.UU" />
-          </a>
-          <div className="tooltip">EE.UU</div>
-        </li>
-        <li className="icon-content">
-          <a
-            onClick={() => handleLanguageChange("pt")}
-            disabled={currentLanguage === "pt"}
-            aria-label="Brasil"
-            data-social="Brasil"
-          >
-            <div className="filled"></div>
-            <img src={br} alt="Bandera Brasil" />
-          </a>
-          <div className="tooltip">Brasil</div>
-        </li>
-        <li className="icon-content">
-          <a
-            onClick={() => handleLanguageChange("zh")}
-            disabled={currentLanguage === "zh"}
-            aria-label="China"
-            data-social="China"
-          >
-            <div className="filled"></div>
+    <LanguageSelectorContainer htmlFor="selector">
+      <div>
+        <MdLanguage />
+        <p>{t("Idioma")}</p>
+      </div>
 
-            <img src={china} alt="Bandera de China" />
-          </a>
-          <div className="tooltip">China</div>
-        </li>
-        <li className="icon-content">
-          <a
-            onClick={() => handleLanguageChange("de")}
-            disabled={currentLanguage === "de"}
-            aria-label="Alemania"
-            data-social="Alemania"
-          >
-            <div className="filled"></div>
-            <img src={de} alt="Bandera Alemania" />
-          </a>
-          <div className="tooltip">Alemania</div>
-        </li>
-      </ul>
-    </>
+      <select
+        name="selector"
+        id="selector"
+        value={currentLanguage}
+        onChange={handleLanguageChange}
+      >
+        <option value="es">Argentina</option>
+        <option value="pt">Brasil</option>
+        <option value="zh">Chino</option>
+        <option value="de">Alemán</option>
+        <option value="en">Inglés</option>
+      </select>
+    </LanguageSelectorContainer>
   );
 };
 
