@@ -1,5 +1,5 @@
 export async function sendMessage(message) {
-  const response = await fetch('http://localhost:8000/api/chat/', {
+  const response = await fetch('http://localhost:8000/api/chat/ ' || "https://ia-portfolio-fxyb.onrender.com", {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message }),
@@ -8,5 +8,4 @@ export async function sendMessage(message) {
   return data.response;
 }
 
-// Ejemplo de uso
-sendMessage("Hola").then(reply => reply);
+
