@@ -110,6 +110,7 @@ export const CertificateCard = styled.div`
   }
 
   small {
+    margin-top: 1rem;
     color: var(--silverFull5);
     font-weight: 200;
 
@@ -123,7 +124,7 @@ export const CertificateCard = styled.div`
   }
 
   @media (max-width: 568px) {
-    width: auto;
+    width: 80%;
   }
 
   @media (max-width: 368px) {
@@ -136,6 +137,7 @@ export const ButtonStack = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top: .6rem;
 `;
 
 export const ButtonCertif = styled.button`
@@ -146,6 +148,7 @@ export const ButtonCertif = styled.button`
   color: white;
   padding: 0.2em 1em;
   border: none;
+  border-radius: 4px;
   background-color: transparent;
   overflow: hidden;
   transition: color 0.4s ease-in-out;

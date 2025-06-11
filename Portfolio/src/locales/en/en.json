@@ -1,4 +1,6 @@
 {
+  "Enviar":"Submit",
+  "Pregunta algo": "Ask something",
   "Portafolios personal": "Personal portfolio",
   "¿Qué le interesaría ver?": "What would you be interested in seeing?",
   "Inicio": "Home",
@@ -42,7 +44,7 @@
   "Astrofy": "Astrofy",
   "Goa academia de artes": "Goa martial arts academy",
   "Sitio web con fines academicos. Implementacion de React Router Dom.": "Website for academic purposes. Implementation of React Router Dom.",
-  "Lista de tareas": "To-do list",
+  "Sitio web para empresa dedicada a la habilitacion de comercios.": "Website for a company specializing in commercial development",
   "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Website for an interior design brand. Implementation of React Router Dom and EmailJs library to handle contact form.",
   "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutional website for the sale of sanitary and construction products.",
   "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.": "React Router dom implementation, i18n library for language translation (used with React-Context), styled components.",

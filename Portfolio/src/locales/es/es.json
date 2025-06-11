@@ -1,4 +1,6 @@
 {
+  "Enviar":"Enviar",
+  "Pregunta algo":"Pregunta algo",
   "Portafolios personal": "Portafolios personal",
   "¿Que le interesaría ver?": "¿Que le interesaria ver?",
   "Español": "Español",
@@ -28,9 +30,10 @@
   "Technologies": "Tecnologías",
   "platformsOfInterest": "Plataformas de interés",
   "downloadResume": "Descargar CV",
+  "Sitio web para empresa dedicada a la habilitacion de comercios.": "Sitio web para empresa dedicada a la habilitacion de comercios.",
   "certifications": "Certificaciones",
   "oracleProgram": "Programa educativo de Oracle y Alura Latam",
   "clickToViewCertificates": "Click en los botones para ver los certificados",
-  "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.":"Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
-  "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.":"Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django"
+  "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
+  "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.": "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django"
 }

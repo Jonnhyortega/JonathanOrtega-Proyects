@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import LanguageProvider from "./context/LanguageContext";
 import Footer from "./components/Footer/Footer";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 function App() {
   const { i18n } = useTranslation();
@@ -16,6 +17,7 @@ function App() {
       <LanguageProvider>
         <Navbar />
         <AppRoutes />
+        <Chatbot/>
         <Footer />
       </LanguageProvider>
     </Layout>

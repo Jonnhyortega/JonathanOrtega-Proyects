@@ -27,10 +27,10 @@ const LanguageSelector = () => {
         onChange={handleLanguageChange}
       >
         <option value="es">Argentina</option>
-        <option value="pt">Brasil</option>
-        <option value="zh">Chino</option>
-        <option value="de">Alemán</option>
         <option value="en">Inglés</option>
+        {/* <option value="pt">Brasil</option>
+        <option value="zh">Chino</option>
+        <option value="de">Alemán</option> */}
       </select>
     </LanguageSelectorContainer>
   );

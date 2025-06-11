@@ -26,7 +26,6 @@ export const CardContent = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 0;
-
   }
   /* 
   * {
@@ -87,7 +86,6 @@ export const CardContent = styled.div`
 export const CardTitle = styled.div`
   font-size: 1rem;
   width: 90%;
-
   margin: 0;
   text-transform: uppercase;
   transition: color 0.3s ease, transform 0.2s ease;
@@ -99,6 +97,13 @@ export const CardTitle = styled.div`
     font-weight: 700;
     color: var(--greenStyle);
     letter-spacing: 1.2px;
+  }
+
+  small {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    filter: none;
+    font-weight: 100;
   }
   @media (max-width: 768px) {
     font-size: 1.8rem;

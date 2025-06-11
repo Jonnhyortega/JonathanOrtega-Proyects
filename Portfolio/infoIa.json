@@ -1,0 +1,41 @@
+{
+  "biografia": " Soy desarrollador full stack MERN. Trabajo hace 1 año de manera particular generando experiencia en proyectos personales y colaborando en proyectos de código abierto. Me apasiona aprender nuevas tecnologías y mejorar mis habilidades constantemente. Ademas de desarrollar para clientes participe de varios proyectos personales centrandome en alimentar diariamente mi vinculo con el codigo, las buenas practicas, la organizacion de las tareas, siempre tratando de utilizar principios solid para garantizar escalabilidad y una lectura comprensiva para quien lea mi producto. Hoy en dia puedo decir que me siento capacitado para enfrentar cualquier desafio que se me presente aun no estando familiarizado con la tecnologia que el desafio representa ya que son cosas que me toco vivir en mi experiencia personal.",
+  "proyectos": [
+    {
+      "nombre": "Proyecto Astrofy",
+      "descripcion": "Aplicación web academica desarrollada con React y Node js. El backend esta desplegado en render y el front end en vercel.",
+      "tecnologias": ["React", "Node Js", "MongoDb", "Express", "Vercel", "Render", "GitHub", "Docker"]
+    },
+    {
+      "nombre": "Chulos Design",
+      "descripcion": "Sitio web creado para empresa de diseño de interiores realizada con React, su formulario de contacto esta gestionado con emailJs",
+      "tecnologias": ["React", "Style components", "React Router Dom", "EmailJs", "GitHub"]
+    },
+    {
+      "nombre": "Sanitarios Lugano",
+      "descripcion": "Sitio web creado para empresa de venta de materiales de construccion realizada con React, su formulario de contacto esta gestionado con emailJs",
+      "tecnologias": ["React", "Style components", "React Router Dom", "EmailJs", "GitHub"]
+    },
+    {
+      "nombre": "Clipgen",
+      "descripcion": "Sitio web estatico con html, css y javascript, el proyecto ya estaba realizado y me toco refactorizar el codigo ya creado.",
+      "tecnologias": ["Html", "Css", "Javascript", "Django", "GitHub"]
+    },
+    {
+      "nombre": "Gestion Comercial Hc",
+      "descripcion": "Sitio web estatico con html, css y javascript. Proyecto creado para una empresa de gestion comercial, la cual su objetivo se centraba en ofrecer una informacion inicial al potencial cliente.",
+      "tecnologias": ["Html", "Css", "Javascript", "GitHub"]
+    }
+  ],
+  "habilidades": ["JavaScript", "React", "Django", "Python", "HTML", "CSS", "Docker", "Git", "Node.js", "MongoDB", "Conocimientos en AWS", "Conocimientos en Linux", "Conocimientos en Java Y spring boot"],
+  "experiencia": [
+    {
+      "Experiencia particular": "Desarrolle proyectos de manera particular para negocios y empresas, participe  en la refactorizacion de codigo de la parte front end de CLIPGEN AI, una ia automatizadora de videos de clientes españoles, tambien colabore en un proyecto llamado Onlygenius, una plataformoa de trading automatizada en la cual me encargue del front end del login, aqui me maneje en un entorno colaborativo con teniamos dailys diarias, trabajamos con ramas en el versionado del codigo y realizamos deploys continuos."
+    }
+  ],
+  "contacto": {
+    "email": "jonnhyortega@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/jonathan-ortega-a00970191/",
+    "github": "https://github.com/Jonnhyortega"
+  }
+}

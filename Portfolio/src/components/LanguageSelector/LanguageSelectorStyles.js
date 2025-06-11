@@ -6,6 +6,7 @@ export const LanguageSelectorContainer = styled.label`
   justify-content: center;
   flex-direction: column;
   font-size: 1.5rem;
+  z-index: 1099;
 
   div {
     display: flex;
@@ -26,6 +27,7 @@ export const LanguageSelectorContainer = styled.label`
     border-radius: 2px;
     color: white;
     cursor: pointer;
+    
 
     option {
       cursor: pointer;

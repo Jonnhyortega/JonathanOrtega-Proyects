@@ -30,7 +30,9 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.06);background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;

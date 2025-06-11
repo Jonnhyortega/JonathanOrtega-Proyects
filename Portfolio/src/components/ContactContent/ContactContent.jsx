@@ -6,6 +6,7 @@ import {
 } from "./ContactContentStyles";
 import ContactComponent from "./ContactComponent/ContactComponent";
 import Certification from "./Certification/Certification";
+import 'animate.css';
 
 export const ContactContent = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -29,7 +30,9 @@ export const ContactContent = () => {
 
       {showOverlay && (
         <Overlay onClick={handleCloseOverlay}>
-          <OverlayImage src={imageSrc} alt="Certificado" />
+          <OverlayImage onClick={(e) => {
+            e.stopPropagation();
+          }} className={`animate__animated ${showOverlay ? "animate__zoomIn" : ""}`} src={imageSrc} alt="Certificado" />
         </Overlay>
       )}
     </ContactSection>

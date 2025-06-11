@@ -1,7 +1,7 @@
 import ASTROFY from "../imgs/ProjectsImgs/Astrofy/logoAstral.png";
 import SANITARIOSLUGANO from "../imgs/ProjectsImgs/Sanitarios/SanitariosLugano.jpeg";
 import CHULOS_IMG from "../imgs/ProjectsImgs/ChulosDesign/Logo.png";
-import WORK_LIST from "../imgs/ProjectsImgs/WorkList/workList.jpeg";
+import HC from "../imgs/ProjectsImgs/Hc/hc.webp";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
 import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg";
@@ -46,8 +46,7 @@ export const projects = [
     img: AstralVision,
     gitHub: "https://github.com/Jonnhyortega/astralvision",
     link: "https://astralvision.vercel.app/",
-    description:
-      "Implementacion de React Router Dom y styled components.",
+    description: "Implementacion de React Router Dom y styled components.",
     language: ["html5", "css3", "js", "react"],
   },
   {
@@ -76,18 +75,16 @@ export const projects = [
     img: GOA,
     gitHub: "https://github.com/Jonnhyortega/Landing",
     link: "https://landing-goa.vercel.app/",
-    description:
-      "Implementacion de React Router Dom.",
+    description: "Implementacion de React Router Dom.",
     language: ["html5", "css3", "js", "react"],
   },
-
   {
     id: 7,
-    name: "Lista de tareas",
-    img: WORK_LIST,
-    gitHub: "https://github.com/Jonnhyortega/lista-de-tareas",
-    link: "https://lista-de-tareas-topaz.vercel.app/",
-    description: "Aplicacion con fines académicos.",
+    name: "HC habilitaciones",
+    img: HC,
+    gitHub: "https://github.com/Jonnhyortega/hc",
+    link: "https://www.gestioncomercialhc.com/",
+    description: "Sitio web para empresa dedicada a la habilitacion de comercios.",
     language: ["html5", "css3", "js"],
   },
 ];

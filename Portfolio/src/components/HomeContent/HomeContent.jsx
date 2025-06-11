@@ -98,6 +98,13 @@ export const HomeContent = () => {
               alt="nextjs"
             />
           </li>
+          <li>
+            {" "}
+            <img width="55" height="55" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-python-an-interpreted-high-level-general-purpose-programming-language-logo-color-tal-revivo.png" alt="external-python-an-interpreted-high-level-general-purpose-programming-language-logo-color-tal-revivo"/>
+          </li>
+          <li>
+            {" "}
+            <img width="60" height="60" src="https://img.icons8.com/fluency/96/tailwind_css.png" alt="tailwind_css"/>          </li>
         </SkillsList>
       </SkillsContainer>
     </HomeContainer>

@@ -52,6 +52,7 @@ export const Navbar = () => {
             className="linkedin-link animate__animated animate__zoomIn"
             href="https://www.linkedin.com/in/jonathan-ortega-a00970191/"
             target="_blank"
+            rel="noreferrer"
           >
             Seguir en Linkedin
           </a>
@@ -72,10 +73,10 @@ export const Navbar = () => {
       </div>
 
       <MenuOverlay
+        onClick={toggleMenu}
         ref={menuOverlayRef}
         id="menu-overlay"
         className="animate__animated"
-        
       >
         <NavbarWrapper>
           <NavLink to="/" onClick={(e) => handleNavLinkClick(e)}>
@@ -88,7 +89,9 @@ export const Navbar = () => {
             {t("Proyectos")}
           </NavLink>
         </NavbarWrapper>
-        <LanguageSelector />
+        <div onClick={(e) => e.stopPropagation()}>
+          <LanguageSelector />
+        </div>
       </MenuOverlay>
     </NavButtons>
   );

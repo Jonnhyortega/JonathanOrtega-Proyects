@@ -11,6 +11,7 @@ import certifDW from "../../../imgs/Certifications/CERTIF_DW.webp";
 import certifJs from "../../../imgs/Certifications/CERTIF_JS.webp";
 import certifReact from "../../../imgs/Certifications/REACT.webp";
 import fullStack from "../../../imgs/Certifications/fullStack.webp";
+import respDesign from "../../../imgs/Certifications/respDesign.webp";
 import { useTranslation } from "react-i18next";
 
 export const Certification = ({ handleImageClick }) => {
@@ -44,6 +45,16 @@ export const Certification = ({ handleImageClick }) => {
           </ButtonCertif>
           <ButtonCertif onClick={() => handleImageClick(fullStack)}>
             Full Stack
+          </ButtonCertif>
+        </ButtonStack>
+        <small>{t("Click en los botones para ver los certificados")}</small>
+      </CertificateCard>
+
+      <CertificateCard>
+        <h3>Free Code Camp</h3>       
+        <ButtonStack>
+          <ButtonCertif onClick={() => handleImageClick(respDesign)}>
+            Responsive Design
           </ButtonCertif>
         </ButtonStack>
         <small>{t("Click en los botones para ver los certificados")}</small>

@@ -25,11 +25,15 @@ export const ProjectContent = () => {
   return (
     <ContainerProjects>
       <Title>Proyectos</Title>
-      <div className="container-projects">
+      <div className="container-projects">       
+        {projects.map((project) => (
+          <Card key={project.id} data={project} />
+        ))}
         <CardContent $backgroundimage={clipgenLogo}>
           <div className="title-and-icons">
             <CardTitle>
               <h2>{t("CLIPGENAI")}</h2>
+              <small>(Todavia no ha sido lanzado)</small>
             </CardTitle>
             <CardLanguages>
               <img
@@ -61,10 +65,15 @@ export const ProjectContent = () => {
               </p>
             </CardText>
             <ButtonsDiv>
-              <a target="_blank" href="https://www.clipgenai.com">
+              {/* <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.clipgenai.com"
+              >
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </a>
+              </a> */}
               <a
+                rel="noreferrer"
                 target="_blank"
                 href={"https://github.com/Jonnhyortega/clipgen-frontend"}
               >
@@ -73,9 +82,6 @@ export const ProjectContent = () => {
             </ButtonsDiv>
           </div>
         </CardContent>
-        {projects.map((project) => (
-          <Card key={project.id} data={project} />
-        ))}
       </div>
     </ContainerProjects>
   );
