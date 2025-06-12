@@ -31,7 +31,7 @@ export const Chatbot = () => {
     <ChatbotContainer>
       {!chatOpen && (
         <button className="chat-icon" onClick={toggleChat} aria-label="Abrir chat">
-          <img width="50" height="50" src="https://img.icons8.com/color/50/bot.png" alt="bot"/>
+          <img width="60" height="60" src="https://img.icons8.com/color/50/bot.png" alt="bot"/>
         </button>
       )}
 

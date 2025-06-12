@@ -6,7 +6,7 @@ export const ChatbotContainer = styled.div`
   right: 20px;
   font-family: Arial, sans-serif;
   z-index: 10000;
-
+  
   h4{
     font-family: var(--kanit);
   }
@@ -55,7 +55,6 @@ export const ChatbotContainer = styled.div`
     width: 90%;
     height: 90%;
     background: black;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -95,8 +94,13 @@ export const ChatbotContainer = styled.div`
     flex: 1;
     padding: 12px 16px;
     overflow-y: auto;
-    background: var(--violetFull3);
-    position: relative;
+background: linear-gradient(
+    to bottom,
+    rgba(74, 35, 90, 1) 0%,
+    rgba(108, 52, 131, 1) 38%,
+    rgba(142, 68, 173, 1) 80%
+     );    position: relative;
+    
     }
 
     .empty-msg {
@@ -120,9 +124,7 @@ export const ChatbotContainer = styled.div`
     word-wrap: break-word;
     font-family: var(--kanit);
     font-weight: 300;
-    &:hover {
-    background-color: gold;
-    }
+    
     }
 
     
@@ -143,19 +145,23 @@ export const ChatbotContainer = styled.div`
     display: flex;
     padding: 8px 12px;
     border-top: 1px solid transparent;
-    background-color: black;
+    background: black;
     }
 
     .chat-input-area input {
     flex: 1;
     padding: 8px 12px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 14px;
     outline: none;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: var(--greenStyle);
     font-family: var(--kanit);
+    }
+
+    .chat-input-area input::placeholder{
+      color: white;
     }
 
     .chat-input-area button {

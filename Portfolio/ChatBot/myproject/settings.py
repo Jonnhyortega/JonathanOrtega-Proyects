@@ -46,10 +46,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+APPEND_SLASH = True
+# Configuración de CORS
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "http://localhost:5174",
     "https://ia-portfolio-fxyb.onrender.com",
-    "https://jonnhyortegadev.com"
+    "https://jonnhyortegadev.com",
+    "https://portfolio-ortega.vercel.app"
 ]
 
 ROOT_URLCONF = 'myproject.urls'
