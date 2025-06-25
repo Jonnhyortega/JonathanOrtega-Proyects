@@ -20,15 +20,12 @@ export const Certification = ({ handleImageClick }) => {
     <CertificationSection>
       <h2>{t("Certificaciones")}</h2>
       <CertificateCard>
-        <h3>Alura Latam - Oracle</h3>
-        <p>{t("Programa educativo de Oracle y Alura Latam")}</p>
-        <a
-          href="https://app.aluracursos.com/user/jonnhyortega/fullCertificate/3195a1e9faf52cddc7ec10489f7f6b37"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faEye} />
-        </a>
+        <h3>MundosE - UNC</h3>
+        <p>DevOps</p>
+        <ButtonStack>
+          
+        </ButtonStack>
+        <small>{t("Actualmente cursando")}</small>
       </CertificateCard>
       <CertificateCard>
         <h3>Nucba - Full Stack</h3>
@@ -49,7 +46,17 @@ export const Certification = ({ handleImageClick }) => {
         </ButtonStack>
         <small>{t("Click en los botones para ver los certificados")}</small>
       </CertificateCard>
-
+      <CertificateCard>
+        <h3>Alura Latam - Oracle</h3>
+        <p>{t("Programa educativo de Oracle y Alura Latam")}</p>
+        <a
+          href="https://app.aluracursos.com/user/jonnhyortega/fullCertificate/3195a1e9faf52cddc7ec10489f7f6b37"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon icon={faEye} />
+        </a>
+      </CertificateCard>      
       <CertificateCard>
         <h3>Free Code Camp</h3>       
         <ButtonStack>

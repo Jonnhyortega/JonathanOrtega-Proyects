@@ -5,9 +5,9 @@ export const CardContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: 280px;
   width: 350px;
-  border-radius: 2px;
+  border-radius: 3px;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
   border-top: 1px solid grey;
@@ -130,6 +130,7 @@ export const CardText = styled.div`
 export const CardLanguages = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   font-size: 2em;
   border-radius: 5px;

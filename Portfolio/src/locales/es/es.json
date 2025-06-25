@@ -1,5 +1,6 @@
 {
   "Enviar":"Enviar",
+  "presentacion-por-chat":"¡Hola! Soy Jonson, el asistente de Jonathan Ortega 💻\nPuedo ayudarte con dudas técnicas, servicios o contacto.\n¿Con qué querés comenzar?",
   "Pregunta algo":"Pregunta algo",
   "Portafolios personal": "Portafolios personal",
   "¿Que le interesaría ver?": "¿Que le interesaria ver?",
@@ -34,6 +35,8 @@
   "certifications": "Certificaciones",
   "oracleProgram": "Programa educativo de Oracle y Alura Latam",
   "clickToViewCertificates": "Click en los botones para ver los certificados",
-  "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
+  "project.portafolios":"Sitio web con funcion de portafolios con interfaz creada en React Js, su backend desarrollado en Django y desplegado en AWS App Runner.",
+  "project.sanitarios": "Sitio web institucional para la venta de productos sanitarios y de construcción.",
+  "project.chulosdesign": "Sitio web para marca de diseño de interiores.",
   "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.": "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django"
 }

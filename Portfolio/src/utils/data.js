@@ -17,11 +17,23 @@ export const imgsTechnologies = {
     "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/external-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-logo-shadow-tal-revivo.png",
   mongo: "https://img.icons8.com/color/50/mongo-db.png",
   docker: "https://img.icons8.com/color/50/docker.png",
+  python: "https://img.icons8.com/color/50/python.png",
+  aws: "https://img.icons8.com/color/50/amazon-web-services.png",
 };
 
 export const projects = [
   {
     id: 1,
+    name: "Portafolios personal",
+    img: Portfolio,
+    gitHub: "https://github.com/Jonnhyortega/JonathanOrtega-Proyects",
+    link: "https:/www.jonnhyortegadev.com/",
+    description:
+      "project.portafolios",
+    language: ["react", "docker", "python", "aws"],
+  },
+  {
+    id: 2,
     name: "Astrofy",
     img: ASTROFY,
     gitHub: "https://github.com/Jonnhyortega/Astrofy",
@@ -31,17 +43,17 @@ export const projects = [
     language: ["html5", "css3", "react", "typescript", "node", "mongo"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Sanitarios Lugano",
     img: SANITARIOSLUGANO,
     gitHub: "https://github.com/Jonnhyortega/sanitarioslugano",
     link: "https://sanitarioslugano.com/",
     description:
-      "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.",
+      "project.sanitarios",
     language: ["html5", "css3", "js", "react"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Astral Vision",
     img: AstralVision,
     gitHub: "https://github.com/Jonnhyortega/astralvision",
@@ -50,23 +62,13 @@ export const projects = [
     language: ["html5", "css3", "js", "react"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Landing Chulos",
     img: CHULOS_IMG,
     gitHub: "https://github.com/Jonnhyortega/landingchulos",
     link: "https://chulosdesign.com/",
     description:
-      "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.",
-    language: ["html5", "css3", "js", "react"],
-  },
-  {
-    id: 5,
-    name: "Portafolios personal",
-    img: Portfolio,
-    gitHub: "https://github.com/Jonnhyortega/JonathanOrtega-Proyects",
-    link: "https:/www.jonnhyortegadev.com/",
-    description:
-      "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.",
+      "project.chulosdesign",
     language: ["html5", "css3", "js", "react"],
   },
   {

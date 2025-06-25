@@ -21,11 +21,12 @@ export const ContactComponent = () => {
   return (
     <ContactSection>
       <h2>{t("Contacto")}</h2>
-      <ImgPerfil src={profilePhoto} alt="Profile" />
+      {/* <ImgPerfil src={profilePhoto} alt="Profile" /> */}
       <p>{t("Plataformas de interés")}</p>
       <IconContainer>
         <a href="mailto:jonnhyortega@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
+          Gmail
         </a>
         <a
           href="https://www.linkedin.com/in/jonathan-ortega-a00970191/"
@@ -33,6 +34,7 @@ export const ContactComponent = () => {
           rel="noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedin} />
+          Linked In
         </a>
         <a
           href="https://github.com/Jonnhyortega"
@@ -40,9 +42,11 @@ export const ContactComponent = () => {
           rel="noreferrer"
         >
           <FontAwesomeIcon icon={faGithub} />
+          Git Hub
         </a>
         <a href="https://wa.link/esj2m3" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faWhatsapp} />
+          WhatSapp
         </a>
       </IconContainer>
     </ContactSection>

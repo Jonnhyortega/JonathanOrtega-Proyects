@@ -1,4 +1,7 @@
+
 {
+  "presentacion-por-chat":"Hi! I'm Jonson, Jonathan Ortega's assistant. 💻 I can help you with technical questions, services, or contact information. What do you want to get started with?",
+  "Actualmente cursando":"Currently studying",
   "Enviar":"Submit",
   "Pregunta algo": "Ask something",
   "Portafolios personal": "Personal portfolio",
@@ -46,7 +49,7 @@
   "Sitio web con fines academicos. Implementacion de React Router Dom.": "Website for academic purposes. Implementation of React Router Dom.",
   "Sitio web para empresa dedicada a la habilitacion de comercios.": "Website for a company specializing in commercial development",
   "Sitio web para marca de diseño de interiores. Implementacion de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Website for an interior design brand. Implementation of React Router Dom and EmailJs library to handle contact form.",
-  "Sitio web institucional para comercio de venta de productos sanitarios y de construccion.": "Institutional website for the sale of sanitary and construction products.",
-  "Implementacion de React Router dom, libreria i18n para traducción de lenguaje (utilizado con React-Context), styled components.": "React Router dom implementation, i18n library for language translation (used with React-Context), styled components.",
-  "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django.": "Refactoring of front-end code of an application aimed at artificial intelligence for video automation developed in Django."
+  "project.sanitarios": "Institutional website for the sale of sanitary and construction products.",
+  "project.portafolios": "Portfolio-enabled website with a frontend built in React Js, a backend developed in Django, and deployed on AWS App Runner.",
+  "": "Refactoring of front-end code of an application aimed at artificial intelligence for video automation developed in Django."
 }

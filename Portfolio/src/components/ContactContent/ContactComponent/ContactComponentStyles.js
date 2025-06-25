@@ -56,20 +56,27 @@ export const ImgPerfil = styled.img`
 
 export const IconContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   margin: 20px 0;
   animation: ${fadeIn} 0.5s ease-out;
-
+  /* background-color: gold; */
+  width: 200px;
   a {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-weight: 300;
     color: var(--silverFull5);
     padding: 10px 15px;
     border-radius: 10px;
     background-color: var(--violetFull1);
     transition: background-color 0.3s ease;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
     &:hover {
       background-color: var(--violetFull5);
     }

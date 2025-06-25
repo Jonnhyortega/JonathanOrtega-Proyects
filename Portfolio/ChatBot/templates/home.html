@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤖 Jonson-IA 🤖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      border-radius: 12px;
+      width: 100%;
+      text-align: left;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p.lead {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      text-align: center;
+      color: #555;
+    }
+    .code-block {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .endpoint {
+      color: #e67e22;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Jonson-IA 🤖</h1>
+    <p class="lead">Bienvenido al servicio de IA de Jonathan Ortega. Usa este endpoint para enviar tus preguntas y recibir respuestas inteligentes basadas en contexto dinámico.</p>
+
+    <h2>Cómo usar</h2>
+    <ol>
+      <li>Envía una petición <strong>POST</strong> a <code class="endpoint">/api/chat/</code> desde tu frontend o cliente HTTP.</li>
+      <li>Incluye en el body un JSON con tres campos:</li>
+      <ul>
+        <li><code>message</code>: tu pregunta o mensaje (string).</li>
+        <li><code>history</code>: array de intercambios previos <code>[{ role: 'user'|'model', content: '...' }]</code>.</li>
+        <li><code>context</code> (opcional): prompt personalizado para ajustar el asistente.</li>
+      </ul>
+      <li>Recibe en la respuesta el campo <code>response</code> con la respuesta generada.</li>
+    </ol>
+
+    <h2>Ejemplo de petición</h2>
+    <div class="code-block">
+{
+  "message": "Hola, ¿cómo estás?",
+  "history": [],
+  "context": "## Contexto: Eres un asistente amigable y profesional."
+}
+    </div>
+
+    <h2>Ejemplo de respuesta</h2>
+    <div class="code-block">
+{
+  "response": "¡Hola! Estoy listo para ayudarte con lo que necesites."
+}
+    </div>
+
+    <footer>
+      &copy; 2025 Jonathan Ortega. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

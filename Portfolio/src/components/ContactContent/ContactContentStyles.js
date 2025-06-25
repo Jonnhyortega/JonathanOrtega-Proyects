@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContactSection = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   // * {
   //   border: 1px solid gold;

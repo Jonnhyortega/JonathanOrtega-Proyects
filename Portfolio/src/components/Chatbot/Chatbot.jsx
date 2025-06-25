@@ -1,73 +1,128 @@
-import React, { useState } from 'react';
-import { ChatbotContainer } from './ChatbotStyles';
-import { sendMessage } from "../../utils/chatbot.js"
-import 'animate.css';
-import { useTranslation } from 'react-i18next';
+import  { useState, useRef, useEffect, useCallback } from "react";
+import { ChatbotContainer } from "./ChatbotStyles";
+import callChatAPI from "../../utils/chatbot";
+import "animate.css";
+import { useTranslation } from "react-i18next";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { leapfrog } from 'ldrs'
+leapfrog.register()
 
 
-export const Chatbot = () => {
-  const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+
+export const Chatbot = ({ context = "" }) => {
   const { t } = useTranslation();
-  const toggleChat = () => setChatOpen(!chatOpen);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      from: "bot",
+      text: t("presentacion-por-chat"),
+    },
+  ]);
+  const [history, setHistory] = useState([]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const quickReplies = [
+    "¿Cómo puedo pedir un presupuesto?",
+    "¿Dónde los encuentro?",
+    "Redes sociales",
+  ];
+
+  const toggleChat = () => setChatOpen(prev => !prev);
+
+  const scrollToBottom = useCallback(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  useEffect(scrollToBottom, [messages, scrollToBottom]);
+
+  useEffect(() => {
+    const handleEsc = e => e.key === "Escape" && setChatOpen(false);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  const send = async (text) => {
+    // Mensaje usuario
+    setMessages(prev => [...prev, { from: 'user', text }]);
+    setHistory(prev => [...prev, { role: 'user', content: text }]);
+    setLoading(true);
+
+    let reply;
+    switch (text) {
+      case "¿Cómo puedo pedir un presupuesto?":
+        reply = "¡Genial! Pedí tu presupuesto aquí: https://wa.me/541158227373";
+        break;
+      case "¿Dónde los encuentro?":
+        reply = "Nuestro local está en Lugano. Coordinemos una reunión cuando quieras.";
+        break;
+      case "Redes sociales":
+        reply = "Seguinos: Instagram https://instagram.com/jonnhyortega, LinkedIn https://linkedin.com/in/jonathan-ortega-a00970191";
+        break;
+      default:
+        try {
+          reply = await callChatAPI(text, history, context);
+        } catch {
+          reply = t("Lo siento, ocurrió un error. ¿Podés intentar nuevamente?");
+        }
+    }
+
+    setMessages(prev => [...prev, { from: 'bot', text: reply }]);
+    setHistory(prev => [...prev, { role: 'model', content: reply }]);
+    setLoading(false);
+  };
+
+  const handleSubmit = e => {
     e.preventDefault();
-    if (!input.trim()) return;
-    setMessages([...messages, { from: 'user', text: input }]);
-    setInput('');
-    sendMessage(input)
-      .then(response => {
-        setMessages(prevMessages => [...prevMessages, { from: 'bot', text: response }]);
-      })
-      .catch(error => {
-        console.error('Error al enviar el mensaje:', error);
-        setMessages(prevMessages => [...prevMessages, { from: 'bot', text: 'Lo siento, ocurrió un error.' }]);
-      });
+    const trimmed = input.trim();
+    if (!trimmed) return;
+    send(trimmed);
+    setInput("");
   };
 
   return (
     <ChatbotContainer>
-      {!chatOpen && (
+      {!chatOpen ? (
         <button className="chat-icon" onClick={toggleChat} aria-label="Abrir chat">
-          <img width="60" height="60" src="https://img.icons8.com/color/50/bot.png" alt="bot"/>
+          <img width="60" height="60" src="https://hpanel.hostinger.com/assets/images/intercom.svg" alt="bot" />
         </button>
-      )}
+      ) : (
+        <div className="overlay" onClick={toggleChat}>
+          <div className="chat-window animate__animated animate__backInUp" onClick={e => e.stopPropagation()}>
+            <header className="chat-header">
+              <img width="50" height="50" src="https://img.icons8.com/avantgarde/50/message-bot.png" alt="message-bot"/>
+              <button className="close-btn" onClick={toggleChat}>×</button>
+            </header>
 
-      {chatOpen && (
-        <div className={`overlay animate__animated ${chatOpen && "animate__backInUp"}`} onClick={toggleChat}>
-          <div className="chat-window" onClick={(e) => e.stopPropagation()}>
-          <header className="chat-header">
-          <img width="50" height="50" src="https://img.icons8.com/color/50/bot.png" alt="bot"/>
+            <div className="chat-messages">
+              {messages.map((m, i) => (
+                <div key={i} className={`message ${m.from} animate__animated animate__fadeIn`}>{m.text}</div>
+              ))}
+              {loading && (
+                  <l-leapfrog size="40"speed="2.5" color="black" ></l-leapfrog>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
 
-            <button className="close-btn" onClick={toggleChat} aria-label="Cerrar chat">
-              ×
-            </button>
-          </header>
+            <div className="quick-replies">
+              {quickReplies.map((q, i) => (
+                <button key={i} onClick={() => send(q)}>{q}</button>
+              ))}
+            </div>
 
-          <div className="chat-messages">
-            {messages.length === 0 && <p className="empty-msg">Escribe tu consulta...</p>}
-            {messages.map((msg, i) => (
-              <div key={i} className={`message ${msg.from}`}>
-                {msg.text}
-              </div>
-            ))}
+            <form className="chat-input-area" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder={t("Pregunta algo...")}
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                autoFocus
+              />
+              <button type="submit"><ArrowUpwardIcon /></button>
+            </form>
+
           </div>
-
-          <form className="chat-input-area" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder={`${t("Pregunta algo")}`}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              autoFocus
-            />
-            <button type="submit">
-              <img width="30" height="30" src="https://img.icons8.com/fluency/96/filled-sent.png" alt="filled-sent"/>
-            </button>
-          </form>
-        </div>
         </div>
       )}
     </ChatbotContainer>
@@ -75,3 +130,4 @@ export const Chatbot = () => {
 };
 
 export default Chatbot;
+

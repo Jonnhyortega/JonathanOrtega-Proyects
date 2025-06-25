@@ -29,7 +29,7 @@ export const ProjectContent = () => {
         {projects.map((project) => (
           <Card key={project.id} data={project} />
         ))}
-        <CardContent $backgroundimage={clipgenLogo}>
+        {/* <CardContent $backgroundimage={clipgenLogo}>
           <div className="title-and-icons">
             <CardTitle>
               <h2>{t("CLIPGENAI")}</h2>
@@ -65,13 +65,7 @@ export const ProjectContent = () => {
               </p>
             </CardText>
             <ButtonsDiv>
-              {/* <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.clipgenai.com"
-              >
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </a> */}
+              
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -81,7 +75,7 @@ export const ProjectContent = () => {
               </a>
             </ButtonsDiv>
           </div>
-        </CardContent>
+        </CardContent> */}
       </div>
     </ContainerProjects>
   );
