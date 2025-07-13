@@ -105,6 +105,7 @@ export const Chatbot = ({ context = "" }) => {
     <ChatbotContainer>
       {!chatOpen ? (
         <button className="chat-icon" onClick={toggleChat} aria-label="Abrir chat">
+          <img className="img" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/google-photos.png" alt="google-photos"/>
           <span>{t("texto_de_boton_de_chat")}</span>
           {/* <img width="60" height="60" src="https://hpanel.hostinger.com/assets/images/intercom.svg" alt="bot" /> */}
         </button>

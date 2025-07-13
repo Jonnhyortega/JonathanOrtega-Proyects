@@ -47,12 +47,28 @@ export const ChatbotContainer = styled.div`
     width: 156px;
     height: 56px;
     transition: 0.3s ease;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    
+    span{
+      font-family: var(--kanit);
+      font-weight: 300;
+    }
+
+    img {
+    transition: 0.3s ease;
+    }
   }
 
 
   .chat-icon:hover {
-        background: var(--violetFull4);
+    background: var(--violetFull4);
+  }
 
+  .chat-icon:hover > img {
+  transform: scale(1.1);
   }
 
   .chat-window {
