@@ -64,7 +64,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -72,18 +71,11 @@ MIDDLEWARE = [
 
 APPEND_SLASH = True
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5173",
-#     "http://localhost:5174",
-#     "https://www.jonnhyortegadev.com",
-#     "https://jonnhyortegadev.com",
-#     "https://portfolio-ortega.vercel.app",
-#     "https://www.portfolio-ortega.vercel.app",
-#     "https://chulosdesign.com",
-#     "https://www.chulosdesign.com",
-#     "https://landingchulos.vercel.app",
-#     "https://www.landingchulos.vercel.app"
-# ]
+ALLOWED_HOSTS = ["*"]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://2j5uuy7hcg.execute-api.us-east-1.amazonaws.com"
+]
 
 CORS_ALLOW_ALL_ORIGINS = True
 

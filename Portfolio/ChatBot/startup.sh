@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/sh
+set -e
 
-# Ejecuta collectstatic para archivos estáticos (opcional, si usas)
-python3 manage.py collectstatic --noinput
+echo ">>> CONTENIDO DE home.html EN PRODUCCIÓN <<<"
+head -n 10 /app/templates/home.html || echo "¡Archivo no encontrado!"
+echo ">>> FIN <<<"
 
-# Inicia Gunicorn con 2 workers, escucha en 0.0.0.0:8080
-gunicorn --workers 2 myproject.wsgi:application --bind 0.0.0.0:8080
+python manage.py migrate --noinput
+python manage.py collectstatic --noinput
+exec gunicorn myproject.wsgi:application --bind 0.0.0.0:8080

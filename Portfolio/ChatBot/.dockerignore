@@ -1,0 +1,21 @@
+# Ignorar control de versiones y artefactos locales
+.git
+.gitignore
+
+# Ignorar entornos virtuales y caches
+venv
+.env
+__pycache__
+*.pyc
+
+# Ignorar bases de datos y archivos de media
+db.sqlite3
+media
+
+# Ignorar logs y carpetas de IDE
+*.log
+.vscode
+.idea
+
+# Ignorar otros archivos pesados o de configuración local
+startup.sh

@@ -3,86 +3,71 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 import google.generativeai as genai
-from datetime import date
+from django.views.decorators.csrf import csrf_exempt
 
-def calcular_edad(fecha_nacimiento):
-    hoy = date.today()
-    edad = hoy.year - fecha_nacimiento.year
-    if (hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
-        edad -= 1
-    return edad
-
-fecha_nac = date(1994, 9, 23)
-
-# Contexto estático para Jonathan
-def generar_contexto_jonathan():
-    return f"""
-## Edad (solo responde con la edad actual, no la fecha de nacimiento)
-Edad: {calcular_edad(fecha_nac)} años
-
-## Interacción profesional
-Responde siempre de manera profesional, directa, con un tono simpático, sin ser cortante.
-
-## Si me preguntas "decime que fecha es hoy", responde exactamente:
-fecha de hoy: {date.today()} moderfucker
-
-## Perfil resumido
-Jonathan Ortega es Desarrollador Full-Stack especializado en MERN (MongoDB, Express, React, Node.js), con aproximadamente 1 año de experiencia práctica en proyectos personales y desarrollo para clientes.
-""".strip()
+# Inicialización de Gemini
+try:
+    genai.configure(api_key=settings.GOOGLE_API_KEY)
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    print("✅ Gemini listo")
+except Exception:
+    model = None
+    print("❌ No se pudo configurar Gemini. Revisa GOOGLE_API_KEY")
 
 def convertir_historial(historial):
+    """
+    Convierte el history del frontend a la forma que espera Gemini.
+    history: [{ role: 'user'|'assistant', content: '...' }, ...]
+    """
     return [
-        {
-            "role": "user" if h["role"] == "user" else "model",
-            "parts": [h["content"]]
-        }
+        {"role": h["role"], "parts": [h["content"]]}
         for h in historial
+        if h["role"] in ("user", "assistant")
     ]
-
-# Configuración de Google Gemini
-try:
-    api_key = settings.GOOGLE_API_KEY
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
-except AttributeError:
-    print("ERROR: GOOGLE_API_KEY no encontrada en settings.py")
-    model = None
-
+    
+@csrf_exempt
 @api_view(['POST'])
 def chat_view(request):
-    user_input   = request.data.get("message")
+    # 1. Leer payload
+    user_input   = request.data.get("message", "").strip()
     historial    = request.data.get("history", [])
     context_body = request.data.get("context", "").strip()
 
+    # 2. Validaciones
     if not user_input:
         return Response(
-            {'error': 'No se proporcionó ningún mensaje.'},
+            {"error": "El campo 'message' es obligatorio."},
             status=status.HTTP_400_BAD_REQUEST
         )
+    if not context_body:
+        return Response(
+            {"error": "El campo 'context' es obligatorio."},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+    if model is None:
+        return Response(
+            {"error": "El servicio de IA no está disponible."},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE
+        )
 
-    # Convertimos el history que venga del frontend
+    # 3. Convertir historial
     historial_gemini = convertir_historial(historial)
 
-    # Definimos el rol de sistema
-    sistema = (
-        "Eres un asistente virtual profesional y amigable. "
-        "Adapta tus respuestas al contexto provisto."
-    )
+    # 4. Inyectar contexto COMO mensaje de usuario al inicio
+    contexto_usuario = {
+        "role": "user",
+        "parts": [context_body]
+    }
+    full_history = [contexto_usuario] + historial_gemini
 
-    # Seleccionamos el contexto: el enviado o el default de Jonathan
-    prompt_contexto = context_body or generar_contexto_jonathan()
-    primer_mensaje  = f"{sistema}\n\n---\n\n{prompt_contexto}"
-
-    # Insertamos siempre el mensaje de sistema + contexto al inicio
-    historial_gemini.insert(0, {"role": "user", "parts": [primer_mensaje]})
-
+    # 5. Llamada al modelo
     try:
-        chat     = model.start_chat(history=historial_gemini)
+        chat     = model.start_chat(history=full_history)
         response = chat.send_message(user_input)
-        return Response({'response': response.text.strip()})
+        return Response({"response": response.text.strip()})
     except Exception as e:
-        print(f"Error al llamar a la API de Google: {e}")
+        # Para depurar, devolvemos la excepción real
         return Response(
-            {'error': 'Hubo un problema al comunicarse con el servicio de IA. Inténtalo de nuevo más tarde.'},
+            {"error": f"Exception: {str(e)}"},
             status=status.HTTP_503_SERVICE_UNAVAILABLE
         )

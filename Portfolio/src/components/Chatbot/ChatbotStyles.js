@@ -40,21 +40,19 @@ export const ChatbotContainer = styled.div`
   }
 
   .chat-icon {
-    background: transparent;
+    background: var(--violetFull5);
     border: none;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
-    width: 56px;
+    width: 156px;
     height: 56px;
-  }
-
-  .chat-icon img {
     transition: 0.3s ease;
   }
 
-  .chat-icon img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(1px 1px 5px var(--violetFull1));
+
+  .chat-icon:hover {
+        background: var(--violetFull4);
+
   }
 
   .chat-window {
@@ -88,6 +86,22 @@ export const ChatbotContainer = styled.div`
     padding: 12px 16px;
     overflow-y: auto;
     background: var(--silverFull5);
+
+    span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+
+    }
+    }
   }
 
   .message {
