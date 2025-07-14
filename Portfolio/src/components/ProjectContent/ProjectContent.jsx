@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import imgsTechnologies from "../../utils/data";
-import clipgenLogo from "../../imgs/ProjectsImgs/Clipgen/clipgenlogo.webp";
 
 export const ProjectContent = () => {
   const { t } = useTranslation();

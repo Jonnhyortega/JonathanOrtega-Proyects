@@ -5,6 +5,7 @@ import HC from "../imgs/ProjectsImgs/Hc/hc.webp";
 import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
 import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg";
+import clipgenLogo from "../imgs/ProjectsImgs/Clipgen/clipgenlogo.webp";
 
 export const imgsTechnologies = {
   html5: "https://img.icons8.com/color/50/html-5--v1.png",
@@ -77,7 +78,7 @@ export const projects = [
     img: GOA,
     gitHub: "https://github.com/Jonnhyortega/Landing",
     link: "https://landing-goa.vercel.app/",
-    description: "Implementacion de React Router Dom.",
+    description: "project.goa",
     language: ["html5", "css3", "js", "react"],
   },
   {
@@ -88,6 +89,15 @@ export const projects = [
     link: "https://www.gestioncomercialhc.com/",
     description: "Sitio web para empresa dedicada a la habilitacion de comercios.",
     language: ["html5", "css3", "js"],
+  },
+  {
+    id: 8,
+    name: "Wuweiclip",
+    img: clipgenLogo,
+    gitHub: "https://github.com/Jonnhyortega/clipgen-frontend/blob/main/manage.py",
+    link: "https://wuweiclip.com/",
+    description: "project.wuweiclip",
+    language: ["html5", "css3", "js", "python"],
   },
 ];
 
