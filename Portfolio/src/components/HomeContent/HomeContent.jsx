@@ -104,7 +104,12 @@ export const HomeContent = () => {
           </li>
           <li>
             {" "}
-            <img width="60" height="60" src="https://img.icons8.com/fluency/96/tailwind_css.png" alt="tailwind_css"/>          </li>
+            <img width="60" height="60" src="https://img.icons8.com/fluency/96/tailwind_css.png" alt="tailwind_css"/>          
+          </li>
+          <li>
+            {" "}
+            <img width="60" height="60" src="https://img.icons8.com/color/50/amazon-web-services.png" alt="aws"/>          
+          </li>
         </SkillsList>
       </SkillsContainer>
     </HomeContainer>

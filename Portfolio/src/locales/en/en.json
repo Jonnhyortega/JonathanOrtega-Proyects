@@ -39,7 +39,7 @@
   "oracleProgram": "Oracle and Alura Latam educational program",
   "clickToViewCertificates": "Click on the buttons to see the certificates",
   "Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.": "Full stack project for academic purposes. Implementation of React Router dom, Redux Toolkit, styled components and axios library. For the backend, mongoDb, node Js and the express library were used.",
-  "Sitio web con fines academicos. Implementacion de React Router Dom y styled components.": "Website for academic purposes. Implementation of React Router Dom and Styled Components",
+  "project.astralvision": "Website for academic purposes. Implementation of React Router Dom and Styled Components",
   "Sitio web para marca de diseño de interiores. Implementación de React Router Dom y biblioteca de EmailJs para manejar el contacto con el formulario.": "Website for an interior design brand. Implementation of React Router Dom and the EmailJs library to handle contact via the form.",
   "Proyecto con fines academicos. Implementacion de React Router dom, Redux Toolkit, styled components y axios fetch.": "Academic project. Implementation of React Router dom, Redux Toolkit, styled components and axios fetch.",
   "Aplicacion con fines académicos.": "Application for academic purposes.",
@@ -53,5 +53,7 @@
   "project.chulosdesign": "Website for an interior design brand. Implementation of React Router Dom and EmailJs library to handle contact form.",
   "project.sanitarios": "Institutional website for the sale of sanitary and construction products.",
   "project.portafolios": "Portfolio-enabled website with a frontend built in React Js, a backend developed in Django, and deployed on AWS Lambda.",
-  "project.wuweiclip": "Refactoring of front-end code of an application aimed at artificial intelligence for video automation developed in Django."
+  "project.wuweiclip": "Refactoring of front-end code of an application aimed at artificial intelligence for video automation developed in Django.",
+  "project.casamolinas": "E-commerce for wine clubs",
+  "project.creatinasticks": "E-commerce for creatine brand"
 }

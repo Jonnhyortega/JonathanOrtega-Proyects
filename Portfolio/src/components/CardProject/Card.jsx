@@ -35,13 +35,13 @@ export const Card = ({ data }) => {
       </div>
       <div className="description-and-links">
         <CardText>
-          <p>{t(data.description)}</p>
+          <p>{t(data.description) }</p>
         </CardText>
         <ButtonsDiv>
           <a target="_blank" href={data.link}>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
-          <a target="_blank" href={data.gitHub}>
+          <a target="_blank" href={data.gitHub} style={{display: data.gitHub ? "flex" : "none"}}>
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </ButtonsDiv>

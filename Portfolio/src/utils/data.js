@@ -6,6 +6,8 @@ import GOA from "../imgs/ProjectsImgs/Goa/goa.png";
 import AstralVision from "../imgs/ProjectsImgs/AstralVision/LogoAstral.jpeg";
 import Portfolio from "../imgs/ProjectsImgs/Portfolio/Portfolio.jpg";
 import clipgenLogo from "../imgs/ProjectsImgs/Clipgen/clipgenlogo.webp";
+import CMlogo from "../imgs/ProjectsImgs/CasaMolinas/logoCM.jpg";
+import CSlogo from "../imgs/ProjectsImgs/CreatinaSticks/CSlogo.jpg";
 
 export const imgsTechnologies = {
   html5: "https://img.icons8.com/color/50/html-5--v1.png",
@@ -20,6 +22,7 @@ export const imgsTechnologies = {
   docker: "https://img.icons8.com/color/50/docker.png",
   python: "https://img.icons8.com/color/50/python.png",
   aws: "https://img.icons8.com/color/50/amazon-web-services.png",
+  next: "https://cdn.jsdelivr.net/npm/simple-icons@15.12.0/icons/nextdotjs.svg"
 };
 
 export const projects = [
@@ -35,16 +38,34 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Astrofy",
-    img: ASTROFY,
-    gitHub: "https://github.com/Jonnhyortega/Astrofy",
-    link: "https://astrofy-ashy.vercel.app/",
-    description:
-      "Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.",
-    language: ["html5", "css3", "react", "typescript", "node", "mongo"],
+    name: "HC habilitaciones",
+    img: HC,
+    gitHub: "https://github.com/Jonnhyortega/hc",
+    link: "https://www.gestioncomercialhc.com/",
+    description: "Sitio web para empresa dedicada a la habilitacion de comercios.",
+    language: ["html5", "css3", "js", "next"],
   },
   {
     id: 3,
+    name: "Astral Vision",
+    img: AstralVision,
+    gitHub: "https://github.com/Jonnhyortega/astralvision",
+    link: "https://astralvision.vercel.app/",
+    description: "project.astralvision",
+    language: ["html5", "css3", "js", "react"],
+  },
+  {
+    id: 4,
+    name: "Landing Chulos",
+    img: CHULOS_IMG,
+    gitHub: "https://github.com/Jonnhyortega/landingchulos",
+    link: "https://chulosdesign.com/",
+    description:
+      "project.chulosdesign",
+    language: ["html5", "css3", "js", "react"],
+  }, 
+  {
+    id: 5,
     name: "Sanitarios Lugano",
     img: SANITARIOSLUGANO,
     gitHub: "https://github.com/Jonnhyortega/sanitarioslugano",
@@ -54,50 +75,48 @@ export const projects = [
     language: ["html5", "css3", "js", "react"],
   },
   {
-    id: 4,
-    name: "Astral Vision",
-    img: AstralVision,
-    gitHub: "https://github.com/Jonnhyortega/astralvision",
-    link: "https://astralvision.vercel.app/",
-    description: "Implementacion de React Router Dom y styled components.",
-    language: ["html5", "css3", "js", "react"],
-  },
-  {
-    id: 5,
-    name: "Landing Chulos",
-    img: CHULOS_IMG,
-    gitHub: "https://github.com/Jonnhyortega/landingchulos",
-    link: "https://chulosdesign.com/",
-    description:
-      "project.chulosdesign",
-    language: ["html5", "css3", "js", "react"],
-  },
-  {
     id: 6,
-    name: "Goa academia de artes",
-    img: GOA,
-    gitHub: "https://github.com/Jonnhyortega/Landing",
-    link: "https://landing-goa.vercel.app/",
-    description: "project.goa",
-    language: ["html5", "css3", "js", "react"],
-  },
-  {
-    id: 7,
-    name: "HC habilitaciones",
-    img: HC,
-    gitHub: "https://github.com/Jonnhyortega/hc",
-    link: "https://www.gestioncomercialhc.com/",
-    description: "Sitio web para empresa dedicada a la habilitacion de comercios.",
-    language: ["html5", "css3", "js"],
-  },
-  {
-    id: 8,
     name: "Wuweiclip",
     img: clipgenLogo,
     gitHub: "https://github.com/Jonnhyortega/clipgen-frontend/blob/main/manage.py",
     link: "https://wuweiclip.com/",
     description: "project.wuweiclip",
     language: ["html5", "css3", "js", "python"],
+  },
+  {
+    id: 7,
+    name: "Casa Molinas",
+    img: CMlogo,
+    link: "https://casamolinas.mitiendanube.com/",
+    description: "project.casamolinas",
+    language: ["html5", "css3", "js"],
+  },
+  {
+    id: 8,
+    name: "Creatina Sticks",
+    img: CSlogo,
+    link: "https://creatinasticks.mitiendanube.com/",
+    description: "project.creatinasticks",
+    language: ["html5", "css3", "js"],
+  },
+  {
+    id: 9,
+    name: "Astrofy",
+    img: ASTROFY,
+    gitHub: "https://github.com/Jonnhyortega/Astrofy",
+    link: "https://astrofy-ashy.vercel.app/",
+    description:
+      "Implementacion de React Router dom, Redux Toolkit, styled components y libreria axios. Para el backend se utilizo mongoDb, node Js y la libreria express.",
+    language: ["html5", "css3", "react", "typescript", "node", "mongo"],
+  },
+  {
+    id: 10,
+    name: "Goa academia de artes",
+    img: GOA,
+    gitHub: "https://github.com/Jonnhyortega/Landing",
+    link: "https://landing-goa.vercel.app/",
+    description: "project.goa",
+    language: ["html5", "css3", "js", "react"],
   },
 ];
 

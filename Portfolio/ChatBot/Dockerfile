@@ -1,13 +1,15 @@
-# Dockerfile para AWS Lambda en Python 3.11
+# Imagen base oficial de Lambda con Python 3.11
 FROM public.ecr.aws/lambda/python:3.11
 
-# Copia y instala las dependencias
-COPY requirements.txt ./
+# Copiar dependencias primero (mejor caching de capas)
+COPY requirements.txt  .
+
+# Instalar dependencias
 RUN pip install --upgrade pip \
  && pip install --no-cache-dir -r requirements.txt
 
-# Copia todo el código del proyecto
+# Copiar el código de la app dentro del root de Lambda
 COPY . ${LAMBDA_TASK_ROOT}
 
-# handler que AWS Lambda invocará
+# Comando que ejecuta AWS Lambda → apunta a tu handler.py
 CMD [ "handler.handler" ]

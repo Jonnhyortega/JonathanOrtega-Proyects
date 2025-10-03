@@ -40,5 +40,9 @@
   "project.sanitarios": "Sitio web institucional para la venta de productos sanitarios y de construcción.",
   "project.chulosdesign": "Sitio web para marca de diseño de interiores.",
   "project.wuweiclip": "Refactorizacion de codigo front end de aplicacion destinada a inteligencia artificial de automatizacion de videos desarrollada en Django",
-  "project.goa":"Sitio web con fines academicos"
+  "project.goa":"Sitio web con fines academicos",
+  "project.astralvision":"Implementacion de React Router Dom y styled components.",
+  "project.casamolinas": "Tienda online para club de vinos",
+  "project.creatinasticks": "Tienda online para marca de creatina"
+
 }
